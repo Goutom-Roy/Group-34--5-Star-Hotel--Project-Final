@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceo.CEODashboardSceneController">
+   <left>
+      <AnchorPane prefHeight="800.0" prefWidth="323.0" style="-fx-background-color: #353A56; -fx-border-width: 2px 2px 2px 2px; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-style: solid;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="30.0" layoutY="138.0" mnemonicParsing="false" onAction="#homeButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="34.0" fitWidth="41.0" layoutX="59.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/home.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="30.0" layoutY="657.0" mnemonicParsing="false" onAction="#productAndServiceButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Product and Services" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="30.0" layoutY="489.0" mnemonicParsing="false" onAction="#guestSatisfactionButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="GuestSatisfaction" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="30.0" layoutY="223.0" mnemonicParsing="false" onAction="#mettingButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Meeting" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="30.0" layoutY="310.0" mnemonicParsing="false" onAction="#budgetButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text=" Budgets" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="34.0" layoutY="573.0" mnemonicParsing="false" onAction="#namageEmployeeButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Manage Employees" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="30.0" layoutY="400.0" mnemonicParsing="false" onAction="#visionMissionButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="VisionMission" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="29.0" layoutY="180.0" prefHeight="145.0" prefWidth="619.0" style="-fx-background-color: #748CF1; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-style: solid;" />
+            <Label layoutX="29.0" layoutY="146.0" prefHeight="34.0" prefWidth="177.0" text="Metting">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="377.0" prefHeight="145.0" prefWidth="619.0" style="-fx-background-color: #60bf73; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-style: solid;" />
+            <Label layoutX="29.0" layoutY="344.0" text="feedback" />
+            <Label layoutX="29.0" layoutY="576.0" prefHeight="145.0" prefWidth="619.0" style="-fx-background-color: #FD9999; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-style: solid;" />
+            <Label layoutX="35.0" layoutY="555.0" text="Buggets" />
+            <Label layoutX="179.0" layoutY="67.0" text="Welcome Dashboard" textFill="#157d31">
+               <font>
+                  <Font name="Times New Roman Bold" size="40.0" />
+               </font>
+            </Label>
+            <Button layoutX="416.0" layoutY="732.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
