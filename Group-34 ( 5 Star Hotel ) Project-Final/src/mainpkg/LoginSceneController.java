@@ -73,22 +73,32 @@ public class LoginSceneController implements Initializable {
        if (emailTextField.getText().isEmpty() && passwordTextField.getText().isEmpty()){
         JFrame frame = new JFrame();
         JOptionPane.showMessageDialog(frame, " ENTER YOUR EMAIL AND PASSWORD ");
+         return;
           }
           else if (passwordTextField.getText().isEmpty()){
         JFrame frame = new JFrame();
          JOptionPane.showMessageDialog(frame, " ENTER YOUR PASSWORD  ");
+          return;
           }
           else if (emailTextField.getText().isEmpty()){         
         JFrame frame = new JFrame();
         JOptionPane.showMessageDialog(frame, " ENTER YOUR EMAIL  ");
+         return;
           }
       
   
         else if (userComboBox.getValue()==null ){         
         JFrame frame = new JFrame();
         JOptionPane.showMessageDialog(frame, " SELECT USER  ");
-        
+         return;
           }
+        else if(emailTextField.getText().isEmpty() && passwordTextField.getText().isEmpty()&&userComboBox.getValue()==null){       
+        JFrame frame = new JFrame();
+        JOptionPane.showMessageDialog(frame, " ENTER YOUR EMAIL , PASSWORD AND USER  ");
+
+        return;
+        }
+       
 // ------------------------------------------------------------------------------------      
         boolean found = false;
         String userEmail = "";
@@ -121,7 +131,7 @@ public class LoginSceneController implements Initializable {
 //            alert.show();
                     if(alert.showAndWait().get()==ButtonType.OK){
 //                        Parent homepage = FXMLLoader.load(getClass().getResource("/ceo/CEODashboardScene.fxml"));
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/ceo/HotelEmployee.fxml"));
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/ceo/CEODashboardScene.fxml"));
                         Scene scene = new Scene(homepage);
                         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         addStage.setScene(scene);
