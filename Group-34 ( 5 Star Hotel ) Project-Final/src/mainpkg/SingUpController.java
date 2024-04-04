@@ -70,14 +70,16 @@ public class SingUpController implements Initializable {
       w1.write( emailTextField.getText().toString() +";"+ passwordTextField.getText().toString()+";"+ 
               userComboBox.getValue().toString()+";"+genderComboBox.getValue().toString()+";"+DatePickerTextField.getValue().toString()+"\n"); 
             
+       w.close();
+       w1.close();
          }
          else{
        JFrame frame = new JFrame();
       JOptionPane.showMessageDialog(frame, "Enter valite Email ");
        return;
       }
-      w1.close();
-      w.close();
+      
+     
       JFrame frame = new JFrame();
       JOptionPane.showMessageDialog(frame, " Registration Completed");
       

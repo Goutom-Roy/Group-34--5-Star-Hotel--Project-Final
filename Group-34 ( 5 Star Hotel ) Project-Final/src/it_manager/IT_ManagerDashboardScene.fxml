@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it_manager.IT_ManagerDashboardSceneController">
+   <left>
+      <AnchorPane prefHeight="800.0" prefWidth="338.0" style="-fx-background-color: #0398fc;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="67.0" layoutY="419.0" mnemonicParsing="false" onAction="#registrationOnActionButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Registration" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="67.0" layoutY="644.0" mnemonicParsing="false" onAction="#logoutOnActionButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
