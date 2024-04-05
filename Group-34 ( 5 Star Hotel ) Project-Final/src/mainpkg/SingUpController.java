@@ -56,21 +56,33 @@ public class SingUpController implements Initializable {
 
     @FXML
     private void signUpButtonOnClick(MouseEvent event) throws IOException {
+         String email = emailTextField.getText().toString();
         try {
      
      FileWriter w = new FileWriter("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserInfo.txt",true);
       FileWriter w1 = new FileWriter("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserDetails.txt",true);
-      
+    
+   // Email Validation check     
+      if (email.endsWith("@gmail.com")) {
       w.write( emailTextField.getText().toString() +";"+ passwordTextField.getText().toString()+";"+ 
               userComboBox.getValue().toString()+"\n"); 
       
       w1.write( emailTextField.getText().toString() +";"+ passwordTextField.getText().toString()+";"+ 
               userComboBox.getValue().toString()+";"+genderComboBox.getValue().toString()+";"+DatePickerTextField.getValue().toString()+"\n"); 
+            
+       w.close();
+       w1.close();
+         }
+         else{
+       JFrame frame = new JFrame();
+      JOptionPane.showMessageDialog(frame, "Enter valite Email ");
+       return;
+      }
       
-      w1.close();
+     
       JFrame frame = new JFrame();
       JOptionPane.showMessageDialog(frame, " Registration Completed");
-      w.close();
+      
        Parent Loginpage = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
         Scene scene = new Scene(Loginpage);
         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
