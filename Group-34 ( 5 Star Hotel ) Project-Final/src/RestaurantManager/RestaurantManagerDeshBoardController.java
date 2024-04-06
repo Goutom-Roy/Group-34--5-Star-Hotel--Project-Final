@@ -51,9 +51,6 @@ public class RestaurantManagerDeshBoardController implements Initializable {
     private void orderManagementButtonOnClick(ActionEvent event) {
     }
 
-    @FXML
-    private void feedbackButtonOnClick(ActionEvent event) {
-    }
 
     @FXML
     private void discountButtonOnClick(ActionEvent event) {
@@ -65,6 +62,22 @@ public class RestaurantManagerDeshBoardController implements Initializable {
 
     @FXML
     private void logOutButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void generatePerformanceReportButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void respondToReviewsButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void customerCareButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void resignationButtonOnClick(ActionEvent event) {
     }
     
 }
