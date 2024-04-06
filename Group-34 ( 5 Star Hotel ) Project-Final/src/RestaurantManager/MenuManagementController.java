@@ -281,7 +281,7 @@ public class MenuManagementController implements Initializable {
 
         currentStage.setScene(AddNewItemScene);
         currentStage.show();
-        AddNewItemController controller=loader.getController();
+        ViewSelectedItemController controller=loader.getController();
         controller.initData(ItemDetailsTableView.getSelectionModel().getSelectedItem(),ItemDetailsTableView.getItems());
     }
 

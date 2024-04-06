@@ -25,7 +25,7 @@ import javafx.stage.Stage;
  *
  * @author ASUS
  */
-public class AddNewItemController implements Initializable {
+public class ViewSelectedItemController implements Initializable {
 
     @FXML
     private Label QuantityShowLabel;
