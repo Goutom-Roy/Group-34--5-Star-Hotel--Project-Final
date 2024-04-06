@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import ModelClass.Employee;
+import java.awt.Frame;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -32,6 +33,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -137,9 +140,11 @@ public class HotelEmployeeController implements Initializable {
 
     @FXML
     private void EmployeeDetailsActionButton(ActionEvent event) throws IOException {
+        
+
         try {
-            
-    
+           Employee selectedItem = tableView.getSelectionModel().getSelectedItem(); 
+          if(selectedItem != null){
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("EmployeeDetailsScene.fxml"));
         Parent userViewParent = loader.load();
@@ -151,10 +156,26 @@ public class HotelEmployeeController implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(userViewScene);
         window.show();
-        
+          }
+      else {
+            
+            Frame frame = new JFrame();
+            JOptionPane.showMessageDialog(frame, "Select a Employee first."); 
+            return;
+            
+         }
             } catch (Exception e) {
                 System.out.println(e);
         }
+    }
+
+    @FXML
+    private void backOnactionButton(ActionEvent event) throws IOException {
+        Parent back=FXMLLoader.load(getClass().getResource("CEODashboardScene.fxml"));
+        Scene newScene=new Scene(back);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
     
 }

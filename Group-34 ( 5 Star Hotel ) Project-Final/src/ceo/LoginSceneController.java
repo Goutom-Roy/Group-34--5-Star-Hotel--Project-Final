@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package mainpkg;
+package ceo;
 
+import mainpkg.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -108,7 +109,6 @@ public class LoginSceneController implements Initializable {
         try {
            File file = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserInfo.txt");
             Scanner x = new Scanner(file);
-            
             x.useDelimiter("[;\n]");
             
                 while(x.hasNext() && !found){
@@ -172,67 +172,9 @@ public class LoginSceneController implements Initializable {
                
                }
 //-----------------------------------------
-//Restaurant Manager
-                              
-                   else if(userComboBox.getValue().equals("Restaurant Manager")){
-                   if(emailTextField.getText().equals(userEmail) 
-                        && passwordTextField.getText().equals(userPassword)
-                        && userComboBox.getValue().equals(userRole)){
-                    
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setTitle("Login Confirmation");
-                    alert.setHeaderText("Login Successfully");
-                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
-            
-//            alert.show();
-                    if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/RestaurantManager/RestaurantManagerDeshBoard.fxml"));
-                        Scene scene = new Scene(homepage);
-                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                        addStage.setScene(scene);
-                        addStage.show();
-                        
-                    }
-
-                    return ;
-                    
-                }
-               
-               }
-
-//----------------------------------------------------------------------------------------------------------------
-//Accountant
-                   else if(userComboBox.getValue().equals("Accountant")){
-                   if(emailTextField.getText().equals(userEmail) 
-                        && passwordTextField.getText().equals(userPassword)
-                        && userComboBox.getValue().equals(userRole)){
-                    
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setTitle("Login Confirmation");
-                    alert.setHeaderText("Login Successfully");
-                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
-            
-//            alert.show();
-                    if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/Accountant/AccountantDashboard.fxml"));
-                        Scene scene = new Scene(homepage);
-                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                        addStage.setScene(scene);
-                        addStage.show();
-                        
-                    }
-
-                    return ;
-                    
-                }
-               
-               }
- //----------------------------------------------------------------------------------------------------              
-
+//Sales Manager
 
                     }
-                
-         x.close(); // Close the scanner after use
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("No User Found");
             alert.setContentText("SIGN UP FIRST or (GIVEN THE ACCURATE INFORMATION)");

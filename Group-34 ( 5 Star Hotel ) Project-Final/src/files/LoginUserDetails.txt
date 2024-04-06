@@ -1,10 +1,11 @@
-<<<<<<< Updated upstream
+
+g@gmail.com;12345;CEO;Male;2024-04-10
 g@gmail.com;12345;CEO;Male;2024-04-04
 g@gmail.com;123456;IT Manager;Male;2024-04-11
-=======
 g;12345;CEO;Male;2024-02-26
 g;12345;IT Manager;Male;2024-02-27
 gg;1234;IT Manager;Male;2024-02-26
 M@gmail.com;12345;Restaurant Manager;Female;2024-04-18
 M@gmail.com;12345;Accountant;Female;2024-04-19
->>>>>>> Stashed changes
+
+
