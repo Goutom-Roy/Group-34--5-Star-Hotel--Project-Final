@@ -172,7 +172,63 @@ public class LoginSceneController implements Initializable {
                
                }
 //-----------------------------------------
-//Sales Manager
+//Restaurant Manager
+                              
+                   else if(userComboBox.getValue().equals("Restaurant Manager")){
+                   if(emailTextField.getText().equals(userEmail) 
+                        && passwordTextField.getText().equals(userPassword)
+                        && userComboBox.getValue().equals(userRole)){
+                    
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Login Confirmation");
+                    alert.setHeaderText("Login Successfully");
+                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
+            
+//            alert.show();
+                    if(alert.showAndWait().get()==ButtonType.OK){
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/RestaurantManager/RestaurantManagerDeshBoard.fxml"));
+                        Scene scene = new Scene(homepage);
+                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        addStage.setScene(scene);
+                        addStage.show();
+                        
+                    }
+
+                    return ;
+                    
+                }
+               
+               }
+
+//----------------------------------------------------------------------------------------------------------------
+//Accountant
+                   else if(userComboBox.getValue().equals("Accountant")){
+                   if(emailTextField.getText().equals(userEmail) 
+                        && passwordTextField.getText().equals(userPassword)
+                        && userComboBox.getValue().equals(userRole)){
+                    
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Login Confirmation");
+                    alert.setHeaderText("Login Successfully");
+                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
+            
+//            alert.show();
+                    if(alert.showAndWait().get()==ButtonType.OK){
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/Accountant/AccountantDashboard.fxml"));
+                        Scene scene = new Scene(homepage);
+                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        addStage.setScene(scene);
+                        addStage.show();
+                        
+                    }
+
+                    return ;
+                    
+                }
+               
+               }
+ //----------------------------------------------------------------------------------------------------              
+
 
                     }
                 
