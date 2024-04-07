@@ -57,6 +57,7 @@ public class OrderManagementController implements Initializable {
      Alert acceptOrder=new Alert(Alert.AlertType.INFORMATION,"Order is accepted");
      Alert rejectOrder=new Alert(Alert.AlertType.INFORMATION,"Order is rejected");
       Alert statusAccepted=new Alert(Alert.AlertType.INFORMATION,"Update Pending Order Status to accepted");
+      Alert warningMsg=new Alert(Alert.AlertType.WARNING,"Please Select the row from table");
 
     /**
      * Initializes the controller class.
@@ -85,7 +86,13 @@ public class OrderManagementController implements Initializable {
 
     @FXML
     private void acceptButtonOnClick(ActionEvent event) {
-          Order SelectedRow= OrderDetailsTableView.getSelectionModel().getSelectedItem();
+           Order SelectedRow= OrderDetailsTableView.getSelectionModel().getSelectedItem();
+          if (SelectedRow==null){
+               warningMsg.show();
+              return;
+          }
+           acceptOrder.show();
+          
 //          String x;
 //          if(x.matches(x)SelectedRow){
 //              
@@ -118,6 +125,11 @@ public class OrderManagementController implements Initializable {
 
     @FXML
     private void rejectButtonOnClick(ActionEvent event) {
+          Order SelectedRow= OrderDetailsTableView.getSelectionModel().getSelectedItem();
+          if (SelectedRow==null){
+               warningMsg.show();
+              return;
+          }
          ObservableList<Order> SelectedOrder,allOrder;
         allOrder= OrderDetailsTableView.getItems();
        SelectedOrder=  OrderDetailsTableView.getSelectionModel().getSelectedItems();
@@ -130,6 +142,11 @@ public class OrderManagementController implements Initializable {
 
     @FXML
     private void updateOrderStatusToAccepted(ActionEvent event) {
+          Order SelectedRow= OrderDetailsTableView.getSelectionModel().getSelectedItem();
+          if (SelectedRow==null){
+               warningMsg.show();
+              return;
+          }
         statusAccepted.show();
         
     }
