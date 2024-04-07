@@ -76,10 +76,10 @@ public class OrderManagementController implements Initializable {
     }
      public ObservableList<Order>   getOrders(){
        ObservableList<Order> OrderDetails=FXCollections.observableArrayList(); 
-       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 11),"731","Mr.Rahman Chowdury","Kung Pao Chicken,Szechuan Beef","3 Portion","370BDT","1110BDT","Pending"));
-       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 12),"321","Ms.Zanantul Begume","Garlic Butter Prawns","1 portion","300BDT","300BDT","Pending"));
-       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 13),"725","Mr.Karim Chowdury","Green mango Juice\nSzechuan Beef","2 Portion","370BDT","740BDT","Pending"));
-       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 14),"521","Ms.Shahenoor Begume","Garlic Butter Prawns","1 portion","300BDT","600BDT","Pending"));
+       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 11),"731","Mr.Rahman Chowdury","Kung Pao Chicken\nSzechuan Beef\nDim Sum Platter","3 Portion\n1 Portion\nPlatter For 2","390BDT\n900BDT\n650BDT","3330BDT","Pending"));
+       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 12),"321","Ms.Zanantul Begume","Garlic Butter Prawns\nSzechuan Beef\nCappuccino","Platter For 2\n1 Portion\n2 cup","450BDT\n900BDT\n150BDTBDT","2100BDT","Pending"));
+       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 13),"725","Mr.Karim Chowdury","Kung Pao Chicken\nSzechuan Beef\nThai Soup","2 Portion\n1 Portion\n350ml","390BDT\n900BDT\n270BDT","2180BDT","Pending"));
+       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 14),"521","Ms.Shahenoor Begume","Dim Sum Platter\nChicken Noodle Soup","1 portion\n250ml","450BDT\n270BDT","720BDT","Pending"));
        return OrderDetails;
      }
 
@@ -93,7 +93,13 @@ public class OrderManagementController implements Initializable {
           
         try{
              FileWriter a = new FileWriter("orderStorage.bin");
-             a.write("Date:2024-04-11,731,customerName:Mr.Rahman Chowdury,orderItem:Kaung Pao Chicken,Szechuan Beef,quantity:3 Portion,perUnitPrice:370,totalPrice:1110BDT");
+             a.write("Date:2024-04-11,731,customerName:Mr.Rahman Chowdury,orderItem:Kung Pao Chicken"
+                     + " , Szechuan Beef"
+                     + " , Dim Sum Platter,quantity:3 Portion"
+                     + " , 1 Portion"
+                     + " , Platter For 2,perUnitPrice:390BDT"
+                     + " , 900BDT"
+                     + " , 650BDT,totalPrice:3330BDT");
              a.close();
           }catch(Exception e){
               System.out.println("Error occured");
@@ -145,7 +151,18 @@ public class OrderManagementController implements Initializable {
     }
 
     @FXML
-    private void viewPastOrder(ActionEvent event) {
+    private void viewPastOrder(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewPastOrder.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene UserViewScene = new Scene(parent);
+
+        currentStage.setScene(UserViewScene);
+        currentStage.show(); 
     }
 
     @FXML
