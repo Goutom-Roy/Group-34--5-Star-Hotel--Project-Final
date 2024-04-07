@@ -33,10 +33,6 @@ public class CEODashboardSceneController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void homeButton(ActionEvent event) {
-
-    }
 
     @FXML
     private void productAndServiceButton(ActionEvent event) throws IOException {
@@ -101,6 +97,25 @@ public class CEODashboardSceneController implements Initializable {
         stg1.setScene(newScene);
         stg1.show();
     }
+    }
+
+    @FXML
+    private void FinanceButton(ActionEvent event) throws IOException {
+         Parent singup=FXMLLoader.load(getClass().getResource("CEO_FinanceDashBoardScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+        
+    }
+
+    @FXML
+    private void brandAwarenessOnActionButton(ActionEvent event) throws IOException {
+        Parent singup=FXMLLoader.load(getClass().getResource("CEO_MarketShareandBrandAwareness.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
     
 }
