@@ -78,7 +78,7 @@ public class OrderManagementController implements Initializable {
        ObservableList<Order> OrderDetails=FXCollections.observableArrayList(); 
        OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 11),"731","Mr.Rahman Chowdury","Kung Pao Chicken,Szechuan Beef","3 Portion","370BDT","1110BDT","Pending"));
        OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 12),"321","Ms.Zanantul Begume","Garlic Butter Prawns","1 portion","300BDT","300BDT","Pending"));
-       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 13),"725","Mr.Karim Chowdury","Kung Pao Chicken,Szechuan Beef","2 Portion","370BDT","740BDT","Pending"));
+       OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 13),"725","Mr.Karim Chowdury","Green mango Juice\nSzechuan Beef","2 Portion","370BDT","740BDT","Pending"));
        OrderDetails.add(new Order(LocalDate.of(2024, Month.APRIL, 14),"521","Ms.Shahenoor Begume","Garlic Butter Prawns","1 portion","300BDT","600BDT","Pending"));
        return OrderDetails;
      }
