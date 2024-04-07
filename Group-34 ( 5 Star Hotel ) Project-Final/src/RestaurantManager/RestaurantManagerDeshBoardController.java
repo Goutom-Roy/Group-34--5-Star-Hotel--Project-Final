@@ -49,11 +49,13 @@ public class RestaurantManagerDeshBoardController implements Initializable {
 
     @FXML
     private void orderManagementButtonOnClick(ActionEvent event) {
+        
     }
 
 
     @FXML
     private void discountButtonOnClick(ActionEvent event) {
+        
     }
 
     @FXML

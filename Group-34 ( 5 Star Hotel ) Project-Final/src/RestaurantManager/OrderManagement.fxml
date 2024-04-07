@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="897.0" prefWidth="1227.0" style="-fx-background-color: #6E916F;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="RestaurantManager.OrderManagementController">
+   <children>
+      <AnchorPane prefHeight="112.0" prefWidth="1227.0" style="-fx-background-color: #737373;">
+         <children>
+            <Text fill="#ebe5e5" layoutX="468.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Order Details Show">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="OrderDetailsTableView" layoutX="63.0" layoutY="166.0" prefHeight="399.0" prefWidth="1095.0">
+        <columns>
+          <TableColumn fx:id="OrderDateTableColumn" prefWidth="93.0" text="Order Date" />
+          <TableColumn fx:id="OrderIdTableColumn" prefWidth="69.0" text="Order Id" />
+            <TableColumn fx:id="CustomerNameTableColumn" prefWidth="120.0" text="Customer Name" />
+            <TableColumn fx:id="OrderItemsTableColumn" prefWidth="367.0" text="Order Items" />
+            <TableColumn fx:id="QuantityTableColumn" prefWidth="72.0" text="Quantity" />
+            <TableColumn fx:id="PerUnitPriceTableColumn" prefWidth="143.0" text="Per Unit Price(BDT)" />
+            <TableColumn fx:id="TotalPriceTableColumn" prefWidth="123.0" text="Total Price(BDT)" />
+            <TableColumn fx:id="OrderStatusTableColumn" prefWidth="107.0" text="Order Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="381.0" layoutY="600.0" mnemonicParsing="false" onAction="#acceptButtonOnClick" prefHeight="51.0" prefWidth="152.0" style="-fx-background-radius: 27;" text="Accept">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="611.0" layoutY="600.0" mnemonicParsing="false" onAction="#rejectButtonOnClick" prefHeight="51.0" prefWidth="152.0" style="-fx-background-radius: 27;" text="Reject">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="361.0" layoutY="676.0" mnemonicParsing="false" onAction="#updateOrderStatusToAccepted" prefHeight="51.0" prefWidth="427.0" style="-fx-background-radius: 27;" text="Update Order Status To Accepted">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="24.0" layoutY="825.0" mnemonicParsing="false" onAction="#returnToDashboardButtonOnClick" prefHeight="51.0" prefWidth="300.0" style="-fx-background-radius: 27;" text="Return To dashboard">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="368.0" layoutY="749.0" mnemonicParsing="false" onAction="#viewPastOrder" prefHeight="51.0" prefWidth="427.0" style="-fx-background-radius: 27;" text="View Past Order">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="1052.0" layoutY="825.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" prefHeight="51.0" prefWidth="152.0" style="-fx-background-radius: 27;" text="Log Out">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
