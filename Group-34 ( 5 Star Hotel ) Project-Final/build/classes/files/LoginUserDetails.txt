@@ -9,3 +9,5 @@ M@gmail.com;12345;Restaurant Manager;Female;2024-04-18
 M@gmail.com;12345;Accountant;Female;2024-04-19
 
 
+g@gmail.com;123456;IT Manager;Male;2024-04-03
+g@gmail.com;1234567;Restaurant Manager;Male;2024-04-02
