@@ -76,9 +76,6 @@ public class RestaurantManagerDeshBoardController implements Initializable {
     private void logOutButtonOnClick(ActionEvent event) {
     }
 
-    @FXML
-    private void generatePerformanceReportButtonOnClick(ActionEvent event) {
-    }
 
     @FXML
     private void respondToReviewsButtonOnClick(ActionEvent event) {
@@ -90,6 +87,21 @@ public class RestaurantManagerDeshBoardController implements Initializable {
 
     @FXML
     private void resignationButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void orderAnalysisButtonOnClick(ActionEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("OrderAnalysisPieChart.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene UserViewScene = new Scene(parent);
+
+        currentStage.setScene(UserViewScene);
+        currentStage.show();
     }
     
 }

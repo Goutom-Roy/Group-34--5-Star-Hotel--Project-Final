@@ -24,7 +24,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="92.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Downloads/profile-picture-placeholder-icon-design-in-white-vector-37114567.jpg" />
+                  <Image url="@../Image/profile-picture-placeholder-icon-design-in-white-vector-37114567.jpg" />
                </image>
             </ImageView>
             <Text fill="#f8f4f4" layoutX="106.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
@@ -40,7 +40,7 @@
             <Line endX="242.0" layoutX="106.0" layoutY="279.0" startX="-100.0" stroke="#fffafa" strokeWidth="3.0" />
             <ImageView fitHeight="367.0" fitWidth="328.0" layoutX="9.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Downloads/Untitled%20design.png" />
+                  <Image url="@../Image/Untitled%20design.png" />
                </image>
             </ImageView>
          </children>
@@ -55,7 +55,7 @@
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Button>
-      <Button layoutX="518.0" layoutY="605.0" mnemonicParsing="false" onAction="#generatePerformanceReportButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Generate Performance Report" textFill="#f8f5f5">
+      <Button layoutX="518.0" layoutY="605.0" mnemonicParsing="false" onAction="#orderAnalysisButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Order Analysis" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>

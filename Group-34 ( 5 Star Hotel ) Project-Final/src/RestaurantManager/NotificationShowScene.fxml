@@ -26,7 +26,7 @@
       </AnchorPane>
       <ImageView fitHeight="67.0" fitWidth="94.0" layoutX="364.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Downloads/images.png" />
+            <Image url="@../Image/images_1.png" />
          </image>
       </ImageView>
       <Button layoutX="459.0" layoutY="362.0" mnemonicParsing="false" onAction="#viewNewOrdersButtonOnClick" prefHeight="67.0" prefWidth="312.0" style="-fx-background-radius: 27;" text="View New Orders">
@@ -36,7 +36,7 @@
       </Button>
       <ImageView fitHeight="86.0" fitWidth="107.0" layoutX="353.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Downloads/View%20New%20Order%20Icon.png" />
+            <Image url="@../Image/View%20New%20Order%20Icon.png" />
          </image>
       </ImageView>
       <Button layoutX="41.0" layoutY="758.0" mnemonicParsing="false" onAction="#returnTodashBoardButtonOnClick" prefHeight="49.0" prefWidth="334.0" style="-fx-background-radius: 27;" text="Return To dashboard">
