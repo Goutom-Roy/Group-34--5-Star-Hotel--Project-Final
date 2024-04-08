@@ -16,6 +16,11 @@
                   <Font name="System Bold" size="37.0" />
                </font>
             </Text>
+            <Button layoutX="46.0" layoutY="31.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="51.0" prefWidth="106.0" style="-fx-background-radius: 27;" text="Back">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <TableView fx:id="OrderDetailsTableView" layoutX="63.0" layoutY="166.0" prefHeight="399.0" prefWidth="1095.0">

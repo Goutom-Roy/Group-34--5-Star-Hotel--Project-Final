@@ -185,5 +185,20 @@ public class OrderManagementController implements Initializable {
     @FXML
     private void logOutButtonOnClick(ActionEvent event) {
     }
+
+    @FXML
+    private void backButtonOnClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("NotificationShowScene.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene UserViewScene = new Scene(parent);
+
+        currentStage.setScene(UserViewScene);
+        currentStage.show(); 
+    }
     
 }

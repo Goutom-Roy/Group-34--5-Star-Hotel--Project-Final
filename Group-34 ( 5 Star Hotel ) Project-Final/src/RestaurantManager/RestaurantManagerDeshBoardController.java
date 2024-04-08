@@ -49,7 +49,7 @@ public class RestaurantManagerDeshBoardController implements Initializable {
 
     @FXML
     private void orderManagementButtonOnClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("OrderManagement.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("NotificationShowScene.fxml"));
         Parent parent = loader.load();
 
         
