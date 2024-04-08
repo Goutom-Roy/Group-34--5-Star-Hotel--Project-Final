@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-
 g@gmail.com;12345;CEO
 g@gmail.com;123456;IT Manager
-=======
-g;12345;CEO
-g;12345;IT Manager
-gg;1234;IT Manager
-M@gmail.com;12345;Restaurant Manager
-M@gmail.com;12345;Accountant
->>>>>>> Stashed changes
+g@gmail.com;1234567;Restaurant Manager

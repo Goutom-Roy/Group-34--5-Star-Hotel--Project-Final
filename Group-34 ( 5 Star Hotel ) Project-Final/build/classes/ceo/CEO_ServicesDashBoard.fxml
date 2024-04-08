@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceo.CEO_ServicesDashBoardController">
+   <top>
+      <MenuBar fx:id="MuneBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#BackOnAction" text="Back" />
+                  <MenuItem mnemonicParsing="false" onAction="#closeOnAction" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#updateStatusOnActionButton" text="Update" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="320.0" layoutY="23.0" prefHeight="31.0" prefWidth="165.0" text="    List of services" textFill="#f73d0c">
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="234.0" fitWidth="219.0" layoutX="25.0" layoutY="113.0" onMouseClicked="#spaMouseClick" pickOnBounds="true">
+               <image>
+                  <Image url="@../Image/pngwing.com%20(2).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="116.0" layoutY="131.0" text="Spa" />
+            <ImageView fitHeight="212.0" fitWidth="207.0" layoutX="271.0" layoutY="124.0" onMouseClicked="#butlerMouseClick" pickOnBounds="true">
+               <image>
+                  <Image url="@../Image/images.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="292.0" layoutY="131.0" prefHeight="21.0" prefWidth="141.0" text="Personalized Butler" />
+            <ImageView fitHeight="204.0" fitWidth="233.0" layoutX="525.0" layoutY="125.0" onMouseClicked="#meetingRoomMouseClick" pickOnBounds="true">
+               <image>
+                  <Image url="@../Image/meeting%20room.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="594.0" layoutY="130.0" prefHeight="22.0" prefWidth="108.0" text="Meeting Room" />
+            <ImageView fitHeight="186.0" fitWidth="249.0" layoutX="61.0" layoutY="385.0" onMouseClicked="#train" pickOnBounds="true">
+               <image>
+                  <Image url="@../Image/download.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="129.0" layoutY="393.0" text=" Fitness training center" />
+            <ImageView fitHeight="177.0" fitWidth="221.0" layoutX="350.0" layoutY="390.0" onMouseClicked="#poolMouseClick" pickOnBounds="true">
+               <image>
+                  <Image url="@../Image/pool.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="436.0" layoutY="393.0" text="pool" />
+            <ImageView fitHeight="176.0" fitWidth="203.0" layoutX="622.0" layoutY="391.0" onMouseClicked="#loungeMouseClick" pickOnBounds="true">
+               <image>
+                  <Image url="@../Image/VIP-lounge.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="686.0" layoutY="404.0" text="VIP Lounge" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

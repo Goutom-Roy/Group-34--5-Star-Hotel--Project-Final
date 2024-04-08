@@ -33,13 +33,14 @@ public class CEODashboardSceneController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void homeButton(ActionEvent event) {
-
-    }
 
     @FXML
-    private void productAndServiceButton(ActionEvent event) {
+    private void productAndServiceButton(ActionEvent event) throws IOException {
+        Parent singup=FXMLLoader.load(getClass().getResource("CEO_ServicesDashBoard.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
 
     @FXML
@@ -47,11 +48,21 @@ public class CEODashboardSceneController implements Initializable {
     }
 
     @FXML
-    private void mettingButton(ActionEvent event) {
+    private void mettingButton(ActionEvent event) throws IOException {
+        Parent singup=FXMLLoader.load(getClass().getResource("CEO_Meeting.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
 
     @FXML
-    private void budgetButton(ActionEvent event) {
+    private void budgetButton(ActionEvent event) throws IOException {
+        Parent singup=FXMLLoader.load(getClass().getResource("CEO_BudgetDashBardScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
 
     @FXML
@@ -64,7 +75,12 @@ public class CEODashboardSceneController implements Initializable {
     }
 
     @FXML
-    private void visionMissionButton(ActionEvent event) {
+    private void visionMissionButton(ActionEvent event) throws IOException {
+        Parent singup=FXMLLoader.load(getClass().getResource("CEO_VisionMissionDashBordScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
 
     @FXML
@@ -81,6 +97,25 @@ public class CEODashboardSceneController implements Initializable {
         stg1.setScene(newScene);
         stg1.show();
     }
+    }
+
+    @FXML
+    private void FinanceButton(ActionEvent event) throws IOException {
+         Parent singup=FXMLLoader.load(getClass().getResource("CEO_FinanceDashBoardScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+        
+    }
+
+    @FXML
+    private void brandAwarenessOnActionButton(ActionEvent event) throws IOException {
+        Parent singup=FXMLLoader.load(getClass().getResource("CEO_MarketShareandBrandAwareness.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
     
 }

@@ -108,6 +108,7 @@ public class LoginSceneController implements Initializable {
         try {
            File file = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserInfo.txt");
             Scanner x = new Scanner(file);
+            
             x.useDelimiter("[;\n]");
             
                 while(x.hasNext() && !found){
@@ -230,6 +231,8 @@ public class LoginSceneController implements Initializable {
 
 
                     }
+                
+         x.close(); // Close the scanner after use
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("No User Found");
             alert.setContentText("SIGN UP FIRST or (GIVEN THE ACCURATE INFORMATION)");

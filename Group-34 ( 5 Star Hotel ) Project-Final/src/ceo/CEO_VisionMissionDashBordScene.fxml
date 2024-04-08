@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceo.CEO_VisionMissionDashBordSceneController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="visionTextArea" layoutX="23.0" layoutY="109.0" prefHeight="169.0" prefWidth="875.0" />
+            <TextArea fx:id="missionTextArea" layoutX="22.0" layoutY="310.0" prefHeight="169.0" prefWidth="875.0" />
+            <TextArea fx:id="strategyTextArea" layoutX="22.0" layoutY="513.0" prefHeight="169.0" prefWidth="875.0" />
+            <Label layoutX="298.0" layoutY="8.0" prefHeight="53.0" prefWidth="323.0" text=" vision, mission, and strategy">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="73.0" prefHeight="24.0" prefWidth="59.0" text="VIsion">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="286.0" prefHeight="24.0" prefWidth="59.0" text="Mission">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="479.0" prefHeight="24.0" prefWidth="59.0" text="Strategy">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#saveonActionButton" text="save" />
+                  <MenuItem mnemonicParsing="false" onAction="#backOnActionButton" text="Back" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#editVisionOnActionButton" text="Vision" />
+                  <MenuItem mnemonicParsing="false" onAction="#editMissionOnActionButton" text="Mission" />
+                  <MenuItem mnemonicParsing="false" onAction="#editStrategyOnActionButton" text="Strategy" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
