@@ -22,6 +22,13 @@ public class Budget {
         this.year = year;
     }
 
+    public Budget(double totalBudget, double expenses, int year) {
+        this.totalBudget = totalBudget;
+        this.expenses = expenses;
+        this.year = year;
+    }
+    
+
     public double getTotalBudget() {
         return totalBudget;
     }

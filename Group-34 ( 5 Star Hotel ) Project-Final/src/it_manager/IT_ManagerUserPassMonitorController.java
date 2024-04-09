@@ -8,14 +8,21 @@ package it_manager;
 import ModelClass.User;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -36,6 +43,8 @@ public class IT_ManagerUserPassMonitorController implements Initializable {
     private TableColumn<User,String> genderColumn;
     @FXML
     private TableColumn<User,LocalDate> passwordCgangedateColumn;
+    @FXML
+    private MenuBar menuBar;
 
     /**
      * Initializes the controller class.
@@ -76,5 +85,15 @@ public class IT_ManagerUserPassMonitorController implements Initializable {
         }  
      
     }    
+
+    @FXML
+    private void backOnAction(ActionEvent event) throws IOException {
+        
+        Parent back = FXMLLoader.load(getClass().getResource("RegistrationScene.fxml"));
+        Scene newScene = new Scene(back);
+        Stage stg1 = (Stage) menuBar.getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+    }
     
 }
