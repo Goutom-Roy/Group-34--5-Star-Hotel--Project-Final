@@ -34,6 +34,11 @@
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
+            <Button layoutX="60.0" layoutY="256.0" mnemonicParsing="false" onAction="#budgetOnActionButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Budget" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </left>

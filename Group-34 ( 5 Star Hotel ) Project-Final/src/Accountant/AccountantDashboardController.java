@@ -102,8 +102,8 @@ public class AccountantDashboardController implements Initializable {
     private void feedBackButtonOnClick(ActionEvent event) {
     }
 
-    @FXML
-    private void checkDuesButtonOnClick(MouseEvent event) {
-    }
+//    @FXML
+//    private void checkDuesButtonOnClick(MouseEvent event) {
+//    }
     
 }
