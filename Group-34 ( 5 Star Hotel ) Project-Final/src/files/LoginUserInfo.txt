@@ -1,3 +1,1 @@
-g@gmail.com;123;CEO
-g@gmail.com;12345;IT Manager
-g@gmail.com;12345;Sales Manager
+g@gmail.com;123;IT Manager

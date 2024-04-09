@@ -87,5 +87,15 @@ public class IT_ManagerDashboardSceneController implements Initializable {
         stg1.setScene(newScene);
         stg1.show();
     }
+
+    @FXML
+    private void budgetOnActionButton(ActionEvent event) throws IOException {
+        Parent singup=FXMLLoader.load(getClass().getResource("IT_ManagerBudgetDashBoard.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+        
+    }
     
 }
