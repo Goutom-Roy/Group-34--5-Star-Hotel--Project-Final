@@ -16,13 +16,32 @@ public class User {
     private LocalDate dateofjoin;
     private String gender;
     private String role;
+    private LocalDate passwordChangeDate;
 
-    public User(String email, LocalDate dateofjoin, String gender, String role) {
+   public User(String email, LocalDate dateofjoin, String gender, String role) {
         this.email = email;
         this.dateofjoin = dateofjoin;
         this.gender = gender;
         this.role = role;
     }
+    
+   public User(String email, String password, LocalDate dateofjoin, String gender, String role, LocalDate passwordChangeDate) {
+        this.email = email;
+        this.password = password;
+        this.dateofjoin = dateofjoin;
+        this.gender = gender;
+        this.role = role;
+        this.passwordChangeDate = passwordChangeDate;
+    }
+
+    public LocalDate getPasswordChangeDate() {
+        return passwordChangeDate;
+    }
+
+    public void setPasswordChangeDate(LocalDate passwordChangeDate) {
+        this.passwordChangeDate = passwordChangeDate;
+    }
+
 
 
     public String getEmail() {
