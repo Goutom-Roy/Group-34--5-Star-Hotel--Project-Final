@@ -55,7 +55,7 @@ public class LoginSceneController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
       userComboBox.getItems().addAll("CEO", "IT Manager", "Sales Manager", "Revenue Manager",
                 "Restaurant Manager", "Accountant", "Hotel Receptionist",
-                "Security Manager", "Customer", "Staff");
+                "Security Manager", "Customer", "Staff Manager");
       passwordShowTextField.setVisible(false);
       showEye.setVisible(false);
       
