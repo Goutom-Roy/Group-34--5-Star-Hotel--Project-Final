@@ -8,8 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" onDragDetected="#checkDuesButtonOnClick" prefHeight="836.0" prefWidth="992.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Accountant.AccountantDashboardController">
+<AnchorPane id="AnchorPane" onDragDetected="#checkDuesButtonOnClick" prefHeight="836.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.AccountantDashboardController">
    <children>
       <AnchorPane layoutX="-8.0" layoutY="-14.0" prefHeight="851.0" prefWidth="362.0" style="-fx-background-color: #737373;">
          <children>
@@ -29,6 +28,11 @@
                </font>
             </Text>
             <Line endX="260.0" layoutX="102.0" layoutY="310.0" startX="-102.0" stroke="#f5f2f2" strokeWidth="3.0" />
+            <Button layoutX="126.0" layoutY="786.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-radius: 27;" text="Log Out">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="357.0" layoutY="-1.0" prefHeight="141.0" prefWidth="639.0" style="-fx-background-color: #737373;">
@@ -46,32 +50,37 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Button layoutX="542.0" layoutY="193.0" mnemonicParsing="false" onAction="#checkDuesButtonOnClick" prefHeight="57.0" prefWidth="356.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Check Dues" textFill="#f8f5f5">
+      <Button layoutX="553.0" layoutY="171.0" mnemonicParsing="false" onAction="#checkDuesButtonOnClick" prefHeight="57.0" prefWidth="357.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Check Dues" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="541.0" layoutY="283.0" mnemonicParsing="false" onAction="#salaryManagementButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Salary Management" textFill="#f8f5f5">
+      <Button layoutX="551.0" layoutY="253.0" mnemonicParsing="false" onAction="#salaryManagementButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Salary Management" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="541.0" layoutY="371.0" mnemonicParsing="false" onAction="#manageFinancialRecordButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Manage Financial Record" textFill="#f8f5f5">
+      <Button layoutX="551.0" layoutY="335.0" mnemonicParsing="false" onAction="#manageFinancialRecordButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Manage Financial Record" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="546.0" layoutY="464.0" mnemonicParsing="false" onAction="#expenditureButtonOnClick" prefHeight="57.0" prefWidth="347.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Expenditure" textFill="#f8f5f5">
+      <Button layoutX="551.0" layoutY="419.0" mnemonicParsing="false" onAction="#expenditureButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Expenditure" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="551.0" layoutY="555.0" mnemonicParsing="false" onAction="#profitLossChartButtonOnClick" prefHeight="57.0" prefWidth="347.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Profit/Loss Chart" textFill="#f8f5f5">
+      <Button layoutX="551.0" layoutY="502.0" mnemonicParsing="false" onAction="#profitLossChartButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Profit/Loss Chart" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="546.0" layoutY="644.0" mnemonicParsing="false" onAction="#resignationButtonOnClick" prefHeight="57.0" prefWidth="347.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Resignation" textFill="#f8f5f5">
+      <Button layoutX="550.0" layoutY="582.0" mnemonicParsing="false" onAction="#resignationButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Resignation" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="551.0" layoutY="670.0" mnemonicParsing="false" onAction="#feedBackButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Feedback" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
