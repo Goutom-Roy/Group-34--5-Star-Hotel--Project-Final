@@ -6,7 +6,7 @@ package Accountant;
 
 import ModelClass.Expense;
 import ModelClass.Food;
-import RestaurantManager.AddNewItemController;
+import RestaurantManager.ViewSelectedItemController;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;

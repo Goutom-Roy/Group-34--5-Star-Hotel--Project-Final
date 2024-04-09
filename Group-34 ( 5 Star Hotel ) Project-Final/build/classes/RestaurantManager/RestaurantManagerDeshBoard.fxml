@@ -45,41 +45,36 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Button layoutX="565.0" layoutY="199.0" mnemonicParsing="false" onAction="#menuManagementButtonOnClick" prefHeight="75.0" prefWidth="312.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Menu Management" textFill="#f8f5f5">
+      <Button layoutX="518.0" layoutY="153.0" mnemonicParsing="false" onAction="#menuManagementButtonOnClick" prefHeight="75.0" prefWidth="448.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Menu Management" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Button>
-      <Button layoutX="557.0" layoutY="307.0" mnemonicParsing="false" onAction="#orderManagementButtonOnClick" prefHeight="63.0" prefWidth="328.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Order Management" textFill="#f8f5f5">
+      <Button layoutX="518.0" layoutY="251.0" mnemonicParsing="false" onAction="#orderManagementButtonOnClick" prefHeight="63.0" prefWidth="448.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Order Management" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Button>
-      <Button layoutX="565.0" layoutY="402.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="320.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Order Analytics" textFill="#f8f5f5">
+      <Button layoutX="518.0" layoutY="605.0" mnemonicParsing="false" onAction="#generatePerformanceReportButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Generate Performance Report" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Button>
-      <Button layoutX="565.0" layoutY="502.0" mnemonicParsing="false" onAction="#feedbackButtonOnClick" prefHeight="63.0" prefWidth="320.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Feedback" textFill="#f8f5f5">
+      <Button layoutX="518.0" layoutY="425.0" mnemonicParsing="false" onAction="#respondToReviewsButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Respond to Reviews" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Button>
-      <Button layoutX="565.0" layoutY="604.0" mnemonicParsing="false" onAction="#discountButtonOnClick" prefHeight="63.0" prefWidth="328.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Discount" textFill="#f8f5f5">
+      <Button layoutX="518.0" layoutY="335.0" mnemonicParsing="false" onAction="#discountButtonOnClick" prefHeight="63.0" prefWidth="448.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Discount" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Button>
-      <Button layoutX="565.0" layoutY="708.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="338.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Customer Care" textFill="#f8f5f5">
+      <Button layoutX="518.0" layoutY="517.0" mnemonicParsing="false" onAction="#customerCareButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Customer Care" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Button>
-      <ImageView fitHeight="49.0" fitWidth="44.0" layoutX="511.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../Downloads/Order%20management.jpg" />
-         </image>
-      </ImageView>
       <Button layoutX="394.0" layoutY="788.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Back" textFill="#fcf8f8">
          <font>
             <Font name="System Bold Italic" size="17.0" />
@@ -88,6 +83,11 @@
       <Button layoutX="934.0" layoutY="788.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Log Out" textFill="#fcf8f8">
          <font>
             <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="518.0" layoutY="703.0" mnemonicParsing="false" onAction="#resignationButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Resignation" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
          </font>
       </Button>
    </children>

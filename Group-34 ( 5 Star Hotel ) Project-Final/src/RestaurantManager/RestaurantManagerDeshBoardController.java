@@ -48,15 +48,24 @@ public class RestaurantManagerDeshBoardController implements Initializable {
     }
 
     @FXML
-    private void orderManagementButtonOnClick(ActionEvent event) {
+    private void orderManagementButtonOnClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("NotificationShowScene.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene UserViewScene = new Scene(parent);
+
+        currentStage.setScene(UserViewScene);
+        currentStage.show();
     }
 
-    @FXML
-    private void feedbackButtonOnClick(ActionEvent event) {
-    }
 
     @FXML
     private void discountButtonOnClick(ActionEvent event) {
+        
     }
 
     @FXML
@@ -65,6 +74,22 @@ public class RestaurantManagerDeshBoardController implements Initializable {
 
     @FXML
     private void logOutButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void generatePerformanceReportButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void respondToReviewsButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void customerCareButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void resignationButtonOnClick(ActionEvent event) {
     }
     
 }
