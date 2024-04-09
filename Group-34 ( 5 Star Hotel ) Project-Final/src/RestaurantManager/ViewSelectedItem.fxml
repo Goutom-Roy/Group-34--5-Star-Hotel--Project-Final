@@ -10,16 +10,16 @@
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="119.0" prefWidth="956.0" style="-fx-background-color: #737373;">
          <children>
-            <Text fill="#fcf7f7" layoutX="336.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Item">
-               <font>
-                  <Font name="System Bold Italic" size="37.0" />
-               </font>
-            </Text>
             <Button layoutX="31.0" layoutY="22.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="77.0" text="Back">
                <font>
                   <Font name="System Bold Italic" size="19.0" />
                </font>
             </Button>
+            <Text fill="#f5f0f0" layoutX="288.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Selected Item Details">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <Label layoutX="98.0" layoutY="180.0" text="ID:">

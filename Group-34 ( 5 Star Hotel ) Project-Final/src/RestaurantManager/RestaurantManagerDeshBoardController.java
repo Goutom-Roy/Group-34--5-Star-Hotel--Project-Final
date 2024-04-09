@@ -14,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 /**
@@ -68,17 +70,23 @@ public class RestaurantManagerDeshBoardController implements Initializable {
         
     }
 
-    @FXML
-    private void backButtonOnClick(ActionEvent event) {
-    }
 
     @FXML
-    private void logOutButtonOnClick(ActionEvent event) {
+    private void logOutButtonOnClick(ActionEvent event) throws IOException {
+           Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout Confirmation");
+        alert.setHeaderText("Logout Successfully");
+        alert.setContentText("Do you want to Logout ? If not then click Cancel");
+        
+        if(alert.showAndWait().get()==ButtonType.OK){
+        Parent singup=FXMLLoader.load(getClass().getResource("/mainpkg/LoginScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+    }
     }
 
-    @FXML
-    private void generatePerformanceReportButtonOnClick(ActionEvent event) {
-    }
 
     @FXML
     private void respondToReviewsButtonOnClick(ActionEvent event) {
@@ -90,6 +98,21 @@ public class RestaurantManagerDeshBoardController implements Initializable {
 
     @FXML
     private void resignationButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void orderAnalysisButtonOnClick(ActionEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("OrderAnalysisPieChart.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene UserViewScene = new Scene(parent);
+
+        currentStage.setScene(UserViewScene);
+        currentStage.show();
     }
     
 }
