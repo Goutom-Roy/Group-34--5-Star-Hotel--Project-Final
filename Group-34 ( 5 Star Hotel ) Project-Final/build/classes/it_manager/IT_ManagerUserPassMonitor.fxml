@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it_manager.IT_ManagerUserPassMonitorController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableView" layoutX="50.0" layoutY="138.0" prefHeight="490.0" prefWidth="763.0" style="-fx-background-color: green; -fx-border-color: red;">
+               <columns>
+                  <TableColumn fx:id="emailColumn" prefWidth="201.0" text="Email" />
+                  <TableColumn fx:id="roleColumn" prefWidth="110.0" text="Role" />
+                  <TableColumn fx:id="datrofBirthColumn" prefWidth="157.0" text="Date of Birth" />
+                  <TableColumn fx:id="genderColumn" prefWidth="118.0" text="Gender" />
+                  <TableColumn fx:id="passwordCgangedateColumn" prefWidth="175.0" text="PassUpdate Date" />
+               </columns>
+            </TableView>
+            <Label layoutX="304.0" layoutY="26.0" prefHeight="55.0" prefWidth="245.0" text=" PasswordChange History" textFill="#a45353">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
