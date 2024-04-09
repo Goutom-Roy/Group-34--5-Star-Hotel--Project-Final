@@ -121,6 +121,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
                 alert.setHeaderText(null);
                 alert.setContentText("Email and Date of Birth do not match.");
                 alert.showAndWait();
+                return;
             }
 
 
@@ -158,6 +159,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
         alert.setHeaderText(null);
         alert.setContentText("New password and confirmed password do not match.");
         alert.showAndWait();
+        
         return;  
             
     }
