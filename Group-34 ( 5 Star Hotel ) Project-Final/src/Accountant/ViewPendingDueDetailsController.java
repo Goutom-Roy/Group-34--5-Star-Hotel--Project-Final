@@ -135,7 +135,28 @@ public class ViewPendingDueDetailsController implements Initializable {
     }
 
     @FXML
-    private void viewSelectedDueDetailsButtonOnclick(ActionEvent event) {
+    private void viewSelectedDueDetailsButtonOnclick(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewSelectedDueDetails.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene ExpenseDetailsScene = new Scene(parent);
+        currentStage.setScene( ExpenseDetailsScene );
+        currentStage.show();
+      ViewSelectedDueDetailsController controller=loader.getController();
+        controller.initData( ViewPendingDueTableView.getSelectionModel().getSelectedItem());
+    }
+
+    @FXML
+    private void backButtonOnClick(ActionEvent event) throws IOException {
+         Parent back=FXMLLoader.load(getClass().getResource("DueNotificationScene.fxml"));
+        Scene newScene=new Scene(back);
+        Stage stg1=(Stage) MenuBar.getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
     
 }

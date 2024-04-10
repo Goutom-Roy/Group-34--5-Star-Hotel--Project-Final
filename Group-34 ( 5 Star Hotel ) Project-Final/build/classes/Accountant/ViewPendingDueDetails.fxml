@@ -34,6 +34,7 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#payPendingDueButtonOnClick" text="Pay Pending Due" />
                   <MenuItem mnemonicParsing="false" onAction="#viewPastDueDetailsButtonOnClick" text="View Past Due Details" />
+                  <MenuItem mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">

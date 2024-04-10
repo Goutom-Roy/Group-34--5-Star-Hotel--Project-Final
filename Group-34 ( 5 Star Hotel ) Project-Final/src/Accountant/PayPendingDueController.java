@@ -213,17 +213,11 @@ public class PayPendingDueController implements Initializable {
 
     @FXML
     private void backButtonOnClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewPendingDueDetails.fxml"));
-        Parent parent = loader.load();
-
-        
-        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-
-        Scene UserViewScene = new Scene(parent);
-
-        currentStage.setScene(UserViewScene);
-        currentStage.show(); 
+      Parent back=FXMLLoader.load(getClass().getResource("ViewPendingDueDetails.fxml"));
+        Scene newScene=new Scene(back);
+        Stage stg1=(Stage)MenuBar.getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
     
 }
