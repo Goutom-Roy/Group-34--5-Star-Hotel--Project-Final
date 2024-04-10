@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-g@gmail.com;123;CEO;Male;2024-02-28
-g@gmail.com;12345;IT Manager;Male;2024-02-05
-g@gmail.com;12345;Sales Manager;Male;2024-04-02
-=======
-g@gmail.com;12345;IT Manager;Male;2024-04-11
->>>>>>> cea5415132c3b402087f96c9ba8ec7a856d9047b
+g@gmail.com;123;IT Manager;Male;2024-04-11

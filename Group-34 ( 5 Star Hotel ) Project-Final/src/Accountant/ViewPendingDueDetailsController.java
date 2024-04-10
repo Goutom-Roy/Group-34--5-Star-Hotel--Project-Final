@@ -94,7 +94,13 @@ public class ViewPendingDueDetailsController implements Initializable {
     }
 
     @FXML
-    private void viewPastDueDetailsButtonOnClick(ActionEvent event) {
+    private void viewPastDueDetailsButtonOnClick(ActionEvent event) throws IOException {
+         Parent sceneParent = FXMLLoader.load(getClass().getResource("ViewPastDueRecords.fxml"));
+        Scene scene = new Scene(sceneParent);
+        Stage stg = (Stage)MenuBar.getScene().getWindow();
+        stg.setScene(scene);
+        stg.show();
+        
     }
 
     @FXML
