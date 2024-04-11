@@ -49,7 +49,17 @@ public class AccountantDashboardController implements Initializable {
     }
 
     @FXML
-    private void salaryManagementButtonOnClick(ActionEvent event) {
+    private void salaryManagementButtonOnClick(ActionEvent event) throws IOException {
+           FXMLLoader loader = new FXMLLoader(getClass().getResource("SalaryManagement.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene DueNotificationScene = new Scene(parent);
+        currentStage.setScene( DueNotificationScene );
+        currentStage.show();
     }
 
     @FXML
