@@ -93,7 +93,12 @@ public class TaxDetailsController implements Initializable {
     }
 
     @FXML
-    private void viewPastTaxRecordsButtonOnClick(ActionEvent event) {
+    private void viewPastTaxRecordsButtonOnClick(ActionEvent event) throws IOException {
+          Parent back=FXMLLoader.load(getClass().getResource("PastTaxRecords.fxml"));
+        Scene newScene=new Scene(back);
+        Stage stg1=(Stage) MenuBar.getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
 
     @FXML
