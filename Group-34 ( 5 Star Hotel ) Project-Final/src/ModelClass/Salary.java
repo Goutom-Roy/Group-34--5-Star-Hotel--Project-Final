@@ -11,12 +11,17 @@ import java.time.LocalDate;
  * @author ASUS
  */
 public class Salary {
-    private String month,employeeId,employeeName,emailAddress,gender,dateOfBirth,departMent,jobTitle,BasicSalary,regularHours,overTimeHours,totalHours;
-    private String taxDeductions,socialSecurity,healthInsurance,uniformFees,otherDeductions,netsalary,paymentMethod,overTimeEarning,totalDeduction;
-    private LocalDate salaryDate;
+    private String month;
+     private LocalDate salaryDate;
+    private String employeeId,employeeName,emailAddress,gender,dateOfBirth,departMent,jobTitle,BasicSalary,regularHours,overTimeHours,totalHours;
+    private String taxDeductions,socialSecurity,healthInsurance,uniformFees,otherDeductions,ratePerHour,overTimeEarning,totalDeduction,paymentMethod,netsalary;
+   
 
-    public Salary(String month, String employeeId, String employeeName, String emailAddress, String gender, String dateOfBirth, String departMent, String jobTitle, String BasicSalary, String regularHours, String overTimeHours, String totalHours, String taxDeductions, String socialSecurity, String healthInsurance, String uniformFees, String otherDeductions, String netsalary, String paymentMethod, String overTimeEarning, String totalDeduction, LocalDate salaryDate) {
+
+
+    public Salary(String month, LocalDate salaryDate, String employeeId, String employeeName, String emailAddress, String gender, String dateOfBirth, String departMent, String jobTitle, String BasicSalary, String regularHours, String overTimeHours, String totalHours, String taxDeductions, String socialSecurity, String healthInsurance, String uniformFees, String otherDeductions, String ratePerHour, String overTimeEarning, String totalDeduction, String paymentMethod, String netsalary) {
         this.month = month;
+        this.salaryDate = salaryDate;
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.emailAddress = emailAddress;
@@ -33,24 +38,27 @@ public class Salary {
         this.healthInsurance = healthInsurance;
         this.uniformFees = uniformFees;
         this.otherDeductions = otherDeductions;
-        this.netsalary = netsalary;
-        this.paymentMethod = paymentMethod;
+        this.ratePerHour = ratePerHour;
         this.overTimeEarning = overTimeEarning;
         this.totalDeduction = totalDeduction;
-        this.salaryDate = salaryDate;
+        this.paymentMethod = paymentMethod;
+        this.netsalary = netsalary;
     }
-    
 
-  
-    
-
-   
     public String getMonth() {
         return month;
     }
 
     public void setMonth(String month) {
         this.month = month;
+    }
+
+    public LocalDate getSalaryDate() {
+        return salaryDate;
+    }
+
+    public void setSalaryDate(LocalDate salaryDate) {
+        this.salaryDate = salaryDate;
     }
 
     public String getEmployeeId() {
@@ -61,7 +69,13 @@ public class Salary {
         this.employeeId = employeeId;
     }
 
-  
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
 
     public String getEmailAddress() {
         return emailAddress;
@@ -175,36 +189,12 @@ public class Salary {
         this.otherDeductions = otherDeductions;
     }
 
-    public String getNetsalary() {
-        return netsalary;
+    public String getRatePerHour() {
+        return ratePerHour;
     }
 
-    public void setNetsalary(String netsalary) {
-        this.netsalary = netsalary;
-    }
-
-    public String getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public void setPaymentMethod(String paymentMethod) {
-        this.paymentMethod = paymentMethod;
-    }
-
-    public LocalDate getSalaryDate() {
-        return salaryDate;
-    }
-
-    public void setSalaryDate(LocalDate salaryDate) {
-        this.salaryDate = salaryDate;
-    }
-
-    public String getEmployeeName() {
-        return employeeName;
-    }
-
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public void setRatePerHour(String ratePerHour) {
+        this.ratePerHour = ratePerHour;
     }
 
     public String getOverTimeEarning() {
@@ -223,11 +213,38 @@ public class Salary {
         this.totalDeduction = totalDeduction;
     }
 
-    @Override
-    public String toString() {
-        return "Salary{" + "month=" + month + ", employeeId=" + employeeId + ", employeeName=" + employeeName + ", emailAddress=" + emailAddress + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth + ", departMent=" + departMent + ", jobTitle=" + jobTitle + ", BasicSalary=" + BasicSalary + ", regularHours=" + regularHours + ", overTimeHours=" + overTimeHours + ", totalHours=" + totalHours + ", taxDeductions=" + taxDeductions + ", socialSecurity=" + socialSecurity + ", healthInsurance=" + healthInsurance + ", uniformFees=" + uniformFees + ", otherDeductions=" + otherDeductions + ", netsalary=" + netsalary + ", paymentMethod=" + paymentMethod + ", overTimeEarning=" + overTimeEarning + ", totalDeduction=" + totalDeduction + ", salaryDate=" + salaryDate + '}';
+    public String getPaymentMethod() {
+        return paymentMethod;
     }
 
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public String getNetsalary() {
+        return netsalary;
+    }
+
+    public void setNetsalary(String netsalary) {
+        this.netsalary = netsalary;
+    }
+
+    @Override
+    public String toString() {
+        return "Salary{" + "month=" + month + ", salaryDate=" + salaryDate + ", employeeId=" + employeeId + ", employeeName=" + employeeName + ", emailAddress=" + emailAddress + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth + ", departMent=" + departMent + ", jobTitle=" + jobTitle + ", BasicSalary=" + BasicSalary + ", regularHours=" + regularHours + ", overTimeHours=" + overTimeHours + ", totalHours=" + totalHours + ", taxDeductions=" + taxDeductions + ", socialSecurity=" + socialSecurity + ", healthInsurance=" + healthInsurance + ", uniformFees=" + uniformFees + ", otherDeductions=" + otherDeductions + ", ratePerHour=" + ratePerHour + ", overTimeEarning=" + overTimeEarning + ", totalDeduction=" + totalDeduction + ", paymentMethod=" + paymentMethod + ", netsalary=" + netsalary + '}';
+    }
+    
+
+  
+    
+
+  
+    
+
+   
+   
+
+   
    
 
   

@@ -5,17 +5,25 @@
 package Accountant;
 
 import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -75,6 +83,8 @@ public class SalaryManagementController implements Initializable {
     Alert unSelectMonth=new Alert(Alert.AlertType.WARNING,"Please Select Month");
     Alert unSelectDate=new Alert(Alert.AlertType.WARNING,"Please Select Date");
     Alert unSelectId=new Alert(Alert.AlertType.WARNING,"Please Select employee Id");
+    @FXML
+    private MenuBar MenuBar;
 
     /**
      * Initializes the controller class.
@@ -117,7 +127,7 @@ public class SalaryManagementController implements Initializable {
                 EmployeeNameTextField.setText("Ayesha Akhter Meghla");
                 EmailAddressTextField.setText("ayesha0341@gmail.com");
                DateOfBirthTextField.setText("2002-04-21");
-               DepartmentTextField.setText("Sales Department");
+               DepartmentTextField.setText("Sales and Marketing");
                JobTitleTextField.setText("Sales Manager");
                BasicSalaryTextField.setText("89000BDT");
                RegularHoursTextField.setText("160hr");
@@ -139,7 +149,7 @@ public class SalaryManagementController implements Initializable {
                  EmployeeNameTextField.setText("Mosammad Maherun Nesa");
                 EmailAddressTextField.setText("maherun093@gmail.com");
                DateOfBirthTextField.setText("2002-04-27");
-               DepartmentTextField.setText("Food And Bevarage t");
+               DepartmentTextField.setText("Department of Food Preparation");
                JobTitleTextField.setText("Restaurant Manager");
                BasicSalaryTextField.setText("87000BDT");
                RegularHoursTextField.setText("160hr");
@@ -164,58 +174,59 @@ public class SalaryManagementController implements Initializable {
                JobTitleTextField.setText("Hotel Receiptionist");
                BasicSalaryTextField.setText("50000");
                RegularHoursTextField.setText("160hr");
-              OverTimeHoursTextField.setText("7hr");
-               TotalHoursTextField.setText("167hr");
+              //OverTimeHoursTextField.setText("7hr");
+               //TotalHoursTextField.setText("167hr");
                TaxDeductionsTextField.setText("10000BDT");
                SocialsecurityTextField.setText("4000BDT");
                HealthInsuranceTextField.setText("2000BDT");
                UniformFeeTextField.setText("800BDT");
                OtherDeductionsTextField.setText("0BDT");
                RatePerHourTextField.setText("52.50BDT");
-               OverTimeEarningTextField.setText("367.5BDT");
-               TotalDeductionTextField.setText("16800BDT");
-               NetSalaryTextField.setText("33567.5BDT");
+               //OverTimeEarningTextField.setText("367.5BDT");
+               //TotalDeductionTextField.setText("16800BDT");
+               //NetSalaryTextField.setText("33567.5BDT");
                 GenderTextField.setText("Male");
                 break;
             case "175":
-                EmployeeNameTextField.setText("Marjana Khanom");
-                EmailAddressTextField.setText("marjana026@gmail.com");
-               DateOfBirthTextField.setText("2002-04-29");
-               DepartmentTextField.setText("Services Department");
-               JobTitleTextField.setText("Staff Manager");
-               BasicSalaryTextField.setText("43000BDT");
-               RegularHoursTextField.setText("160hr");
-              OverTimeHoursTextField.setText("5hr");
-               TotalHoursTextField.setText("165hr");
-               TaxDeductionsTextField.setText("16700BDT");
-               SocialsecurityTextField.setText("6000BDT");
-               HealthInsuranceTextField.setText("3000BDT");
-               UniformFeeTextField.setText("1000BDT");
-               OtherDeductionsTextField.setText("0BDT");
-               RatePerHourTextField.setText("52.50BDT");
-               OverTimeEarningTextField.setText("892.5BDT");
-               TotalDeductionTextField.setText("26700BDT");
-               NetSalaryTextField.setText("84192.5BDT");
-                GenderTextField.setText("Female");                break;
-            case "Nexus Supply Co.":
-                 EmployeeNameTextField.setText("Goutom Roy");
-                EmailAddressTextField.setText("goutom021@gmail.com");
-               DateOfBirthTextField.setText("2002-04-23");
-               DepartmentTextField.setText("Executive Management Department");
-               JobTitleTextField.setText("Cheif executive Officer(CEO)");
-               BasicSalaryTextField.setText("110000");
+                EmployeeNameTextField.setText("Mosammad Maherun Neas");
+                EmailAddressTextField.setText("maherun037@gmail.com");
+               DateOfBirthTextField.setText("2002-04-17");
+               DepartmentTextField.setText("Accounts Department");
+               JobTitleTextField.setText("Accountant");
+               BasicSalaryTextField.setText("70000BDT");
                RegularHoursTextField.setText("160hr");
               OverTimeHoursTextField.setText("17hr");
                TotalHoursTextField.setText("177hr");
-               TaxDeductionsTextField.setText("16700BDT");
-               SocialsecurityTextField.setText("6000BDT");
-               HealthInsuranceTextField.setText("3000BDT");
-               UniformFeeTextField.setText("1000BDT");
+               TaxDeductionsTextField.setText("15000BDT");
+               SocialsecurityTextField.setText("3000BDT");
+               HealthInsuranceTextField.setText("2000BDT");
+               UniformFeeTextField.setText("700BDT");
                OtherDeductionsTextField.setText("0BDT");
                RatePerHourTextField.setText("52.50BDT");
                OverTimeEarningTextField.setText("892.5BDT");
-               TotalDeductionTextField.setText("26700BDT");
-               NetSalaryTextField.setText("84192.5BDT");
+               TotalDeductionTextField.setText("20700BDT");
+               NetSalaryTextField.setText("50192.5BDT");
+                GenderTextField.setText("Female");                
+                break;
+            case "534":
+               EmployeeNameTextField.setText("Goutom Roy");
+                EmailAddressTextField.setText("goutom019@gmail.com");
+               DateOfBirthTextField.setText("2002-04-19");
+               DepartmentTextField.setText("Information Technology Department");
+               JobTitleTextField.setText("IT Manager");
+               BasicSalaryTextField.setText("60000");
+               RegularHoursTextField.setText("160hr");
+              OverTimeHoursTextField.setText("5hr");
+               TotalHoursTextField.setText("165hr");
+               TaxDeductionsTextField.setText("10000BDT");
+               SocialsecurityTextField.setText("3000BDT");
+               HealthInsuranceTextField.setText("2000BDT");
+               UniformFeeTextField.setText("700BDT");
+               OtherDeductionsTextField.setText("0BDT");
+               RatePerHourTextField.setText("52.50BDT");
+               OverTimeEarningTextField.setText("262.5BDT");
+               TotalDeductionTextField.setText("15700BDT");
+               NetSalaryTextField.setText("44562.5BDT");
                 GenderTextField.setText("Male");
                 break;
            
@@ -243,15 +254,15 @@ public class SalaryManagementController implements Initializable {
         }
          try {
             FileWriter w = new FileWriter("SalaryData.bin",true);
-            w.write( SelectMonthComboBox.getValue().toString() +";"+  SelectEmployeeIdComboBox.getValue().toString()+";"+ 
+            w.write( SelectMonthComboBox.getValue().toString() +";"+SalaryPayDatePicker.getValue().toString()+";"+  SelectEmployeeIdComboBox.getValue().toString()+";"+ 
                EmployeeNameTextField.getText().toString()+";"+EmailAddressTextField.getText().toString()+";"+GenderTextField.getText().toString()+";"+ 
                     DateOfBirthTextField.getText().toString()+";"+
                     DepartmentTextField.getText().toString()+";"+JobTitleTextField.getText().toString()+";"+BasicSalaryTextField.getText().toString()+";"+
                     RegularHoursTextField.getText().toString()+";"+ OverTimeHoursTextField.getText().toString()+";"+
                     TotalHoursTextField.getText().toString()+";"+TaxDeductionsTextField.getText().toString()+";"+SocialsecurityTextField.getText().toString()+";"+
                     HealthInsuranceTextField.getText().toString()+";"+UniformFeeTextField.getText().toString()+";"+OtherDeductionsTextField.getText().toString()+";"+
-                    NetSalaryTextField.getText().toString()+";"+PaymentMethodComboBox.getValue().toString()+";"+OverTimeEarningTextField.getText().toString()+";"+
-                    TotalDeductionTextField.getText().toString()+";"+SalaryPayDatePicker.getValue().toString()+";"+"\n"); 
+                    RatePerHourTextField.getText().toString()+";"+OverTimeEarningTextField.getText().toString()+";"+TotalDeductionTextField.getText().toString()+";"+PaymentMethodComboBox.getValue().toString()+";"+NetSalaryTextField.getText().toString()+";"+
+                   "\n"); 
             w.close();
             
            EmployeeNameTextField.clear();
@@ -281,14 +292,63 @@ public class SalaryManagementController implements Initializable {
          
          
             
-      JFrame frame = new JFrame();
-      JOptionPane.showMessageDialog(frame, "Successfully Paid");
+          JFrame frame = new JFrame();
+          JOptionPane.showMessageDialog(frame, "Successfully Transfer the Salary");
             
             
         } catch (Exception e) {
         }
         
         
+    }
+
+    @FXML
+    private void viewSalaryTransferRecordButtonOnclick(ActionEvent event) throws IOException {
+        Parent sceneParent = FXMLLoader.load(getClass().getResource("ViewTransferredSalaryRecords.fxml"));
+        Scene scene = new Scene(sceneParent);
+        Stage stg = (Stage)MenuBar.getScene().getWindow();
+        stg.setScene(scene);
+        stg.show();
+    }
+
+    @FXML
+    private void backButtonOnClick(ActionEvent event) throws IOException {
+         Parent back=FXMLLoader.load(getClass().getResource("ViewPendingDueDetails.fxml"));
+        Scene newScene=new Scene(back);
+        Stage stg1=(Stage)MenuBar.getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show(); 
+    }
+
+    @FXML
+    private void returnToDashboardButtonOnClick(ActionEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("AccountantDashboard.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene UserViewScene = new Scene(parent);
+
+        currentStage.setScene(UserViewScene);
+        currentStage.show(); 
+    }
+
+    @FXML
+    private void logOutButtonOnClick(ActionEvent event) throws IOException {
+           Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout Confirmation");
+        alert.setHeaderText("Logout Successfully");
+        alert.setContentText("Do you want to Logout ? If not then click Cancel");
+        
+        if(alert.showAndWait().get()==ButtonType.OK){
+        Parent singup=FXMLLoader.load(getClass().getResource("/mainpkg/LoginScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+    }
     }
     
 }

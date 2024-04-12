@@ -15,11 +15,12 @@
 
 <AnchorPane id="AnchorPane" prefHeight="1020.0" prefWidth="1394.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.SalaryManagementController">
    <children>
-      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="1346.0">
+      <MenuBar fx:id="MenuBar" layoutY="-2.0" prefHeight="33.0" prefWidth="1394.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewSalaryTransferRecordButtonOnclick" text="View Salary Transfer Record" />
+                  <MenuItem mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
                </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -34,17 +35,17 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Text fill="#fcf7f7" layoutX="470.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prepare Salary" wrappingWidth="380.41650390625">
+      <Text fill="#fcf7f7" layoutX="548.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prepare Salary" wrappingWidth="380.41650390625">
          <font>
             <Font name="System Bold" size="37.0" />
          </font>
       </Text>
       <TextField fx:id="EmployeeNameTextField" layoutX="179.0" layoutY="290.0" />
-      <Line endX="833.0" layoutX="175.0" layoutY="255.0" startX="-100.0" stroke="#f8f3f3" strokeWidth="3.0" />
+      <Line endX="833.0" layoutX="342.0" layoutY="252.0" startX="-100.0" stroke="#f8f3f3" strokeWidth="3.0" />
       <TextField fx:id="EmailAddressTextField" layoutX="179.0" layoutY="458.0" />
       <TextField fx:id="GenderTextField" layoutX="179.0" layoutY="527.0" />
       <TextField fx:id="DateOfBirthTextField" layoutX="179.0" layoutY="590.0" />
-      <ComboBox fx:id="SelectEmployeeIdComboBox" layoutX="203.0" layoutY="195.0" onAction="#SelectEmployeeIdComboBoxOnClick" prefHeight="41.0" prefWidth="743.0" promptText="Select employee ID" />
+      <ComboBox fx:id="SelectEmployeeIdComboBox" layoutX="328.0" layoutY="197.0" onAction="#SelectEmployeeIdComboBoxOnClick" prefHeight="41.0" prefWidth="743.0" promptText="Select employee ID" />
       <TextField fx:id="DepartmentTextField" layoutX="179.0" layoutY="650.0" prefHeight="41.0" prefWidth="187.0" />
       <TextField fx:id="JobTitleTextField" layoutX="179.0" layoutY="734.0" prefHeight="41.0" prefWidth="187.0" />
       <Label layoutX="1.0" layoutY="290.0" text="Employee name:" textFill="#fffdfd">
@@ -85,7 +86,7 @@
       </Label>
       <TextField fx:id="RegularHoursTextField" layoutX="783.0" layoutY="443.0" />
       <TextField fx:id="OverTimeHoursTextField" layoutX="783.0" layoutY="496.0" />
-      <ComboBox fx:id="SelectMonthComboBox" layoutX="347.0" layoutY="131.0" prefHeight="31.0" prefWidth="187.0" promptText="Select Month" />
+      <ComboBox fx:id="SelectMonthComboBox" layoutX="440.0" layoutY="131.0" prefHeight="31.0" prefWidth="187.0" promptText="Select Month" />
       <Line endX="273.0" layoutX="632.0" layoutY="363.0" startX="-120.0" stroke="#e8e3e3" strokeWidth="3.0" />
       <Line endX="102.0" endY="587.0" layoutX="298.0" layoutY="398.0" startX="102.0" startY="-123.0" stroke="#f8f3f3" strokeWidth="3.0" />
       <Label layoutX="471.0" layoutY="443.0" text="Regular Hours(Per month):" textFill="#fffdfd">
@@ -109,7 +110,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Line endX="196.0" endY="3.0517578125E-5" layoutX="502.0" layoutY="118.0" startX="-89.0" startY="3.0517578125E-5" stroke="#e8e3e3" strokeWidth="3.0" />
+      <Line endX="280.0" endY="3.0517578125E-5" layoutX="573.0" layoutY="89.0" startX="-89.0" startY="3.0517578125E-5" stroke="#e8e3e3" strokeWidth="3.0" />
       <Text fill="#fcf7f7" layoutX="519.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary Deductions Calculation" wrappingWidth="380.41650390625">
          <font>
             <Font name="System Bold" size="25.0" />
@@ -159,7 +160,7 @@
          </font>
       </Label>
       <TextField fx:id="NetSalaryTextField" layoutX="1116.0" layoutY="715.0" prefHeight="49.0" prefWidth="122.0" />
-      <DatePicker fx:id="SalaryPayDatePicker" layoutX="684.0" layoutY="131.0" promptText="Select Date" />
+      <DatePicker fx:id="SalaryPayDatePicker" layoutX="783.0" layoutY="131.0" promptText="Select Date" />
       <Label layoutX="471.0" layoutY="402.0" textFill="#fffdfd">
          <font>
             <Font name="System Bold" size="21.0" />
@@ -189,5 +190,15 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
+      <Button layoutX="16.0" layoutY="966.0" mnemonicParsing="false" onAction="#returnToDashboardButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Return To Dashboard" textFill="#f2efef">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="1293.0" layoutY="44.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Log Out" textFill="#f2efef">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
