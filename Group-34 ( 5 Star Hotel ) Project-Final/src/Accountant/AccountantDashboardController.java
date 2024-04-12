@@ -115,5 +115,19 @@ public class AccountantDashboardController implements Initializable {
 //    @FXML
 //    private void checkDuesButtonOnClick(MouseEvent event) {
 //    }
+
+    @FXML
+    private void taxButtonOnClick(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("DueTaxNotification.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene ExpenseDetailsScene = new Scene(parent);
+        currentStage.setScene( ExpenseDetailsScene );
+        currentStage.show();
+    }
     
 }
