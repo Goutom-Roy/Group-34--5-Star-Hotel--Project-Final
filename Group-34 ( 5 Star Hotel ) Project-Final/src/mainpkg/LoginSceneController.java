@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package mainpkg;
 
 import java.io.File;
@@ -60,20 +56,21 @@ public class LoginSceneController implements Initializable {
       showEye.setVisible(false);
       
 
-            
+         
       
     }   
  
 
     @FXML
     private void loginButton(ActionEvent event) throws IOException {
+           
         
  //        alert.show();       
         
        if (emailTextField.getText().isEmpty() && passwordTextField.getText().isEmpty()){
         JFrame frame = new JFrame();
         JOptionPane.showMessageDialog(frame, " ENTER YOUR EMAIL AND PASSWORD ");
-         return;
+        return;
           }
           else if (passwordTextField.getText().isEmpty()){
         JFrame frame = new JFrame();
@@ -90,7 +87,8 @@ public class LoginSceneController implements Initializable {
         else if (userComboBox.getValue()==null ){         
         JFrame frame = new JFrame();
         JOptionPane.showMessageDialog(frame, " SELECT USER  ");
-         return;
+        return;
+        
           }
         else if(emailTextField.getText().isEmpty() && passwordTextField.getText().isEmpty()&&userComboBox.getValue()==null){       
         JFrame frame = new JFrame();
@@ -98,7 +96,8 @@ public class LoginSceneController implements Initializable {
 
         return;
         }
-       
+
+ 
 // ------------------------------------------------------------------------------------      
         boolean found = false;
         String userEmail = "";
@@ -106,9 +105,10 @@ public class LoginSceneController implements Initializable {
         String userRole="";
         
         try {
-           File file = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserInfo.txt");
+           File file = new File("LoginUserInfo.txt");
             Scanner x = new Scanner(file);
             
+ //Scanner will tokenize the input file based on semicolons and newline characters           
             x.useDelimiter("[;\n]");
             
                 while(x.hasNext() && !found){
@@ -146,7 +146,7 @@ public class LoginSceneController implements Initializable {
 //  ---------------------------------------------------------
 //IT manager               
                
-                              else if(userComboBox.getValue().equals("IT Manager")){
+                    else if(userComboBox.getValue().equals("IT Manager")){
                    if(emailTextField.getText().equals(userEmail) 
                         && passwordTextField.getText().equals(userPassword)
                         && userComboBox.getValue().equals(userRole)){
@@ -158,7 +158,7 @@ public class LoginSceneController implements Initializable {
             
 //            alert.show();
                     if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/it_manager/IT_ManagerDashboardScene.fxml"));
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/it_manager/IT_ManagerDashBoardScene.fxml"));
                         Scene scene = new Scene(homepage);
                         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         addStage.setScene(scene);
@@ -172,9 +172,9 @@ public class LoginSceneController implements Initializable {
                
                }
 //-----------------------------------------
-//Restaurant Manager
-                              
-                   else if(userComboBox.getValue().equals("Restaurant Manager")){
+//Sales Manager
+
+                    else if(userComboBox.getValue().equals("Sales Manager")){
                    if(emailTextField.getText().equals(userEmail) 
                         && passwordTextField.getText().equals(userPassword)
                         && userComboBox.getValue().equals(userRole)){
@@ -186,7 +186,7 @@ public class LoginSceneController implements Initializable {
             
 //            alert.show();
                     if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/RestaurantManager/RestaurantManagerDeshBoard.fxml"));
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/SalesManager/SalesManagerDashboard.fxml"));
                         Scene scene = new Scene(homepage);
                         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         addStage.setScene(scene);
@@ -200,9 +200,9 @@ public class LoginSceneController implements Initializable {
                
                }
 
-//----------------------------------------------------------------------------------------------------------------
-//Accountant
-                   else if(userComboBox.getValue().equals("Accountant")){
+//--------------------------------------------------------------------------------------------
+//Revenue Manager
+                    else if(userComboBox.getValue().equals("Revenue Manager")){
                    if(emailTextField.getText().equals(userEmail) 
                         && passwordTextField.getText().equals(userPassword)
                         && userComboBox.getValue().equals(userRole)){
@@ -214,7 +214,7 @@ public class LoginSceneController implements Initializable {
             
 //            alert.show();
                     if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/Accountant/AccountantDashboard.fxml"));
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/RevenueManager/RevenueManagerDashboard.fxml"));
                         Scene scene = new Scene(homepage);
                         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         addStage.setScene(scene);
@@ -227,12 +227,11 @@ public class LoginSceneController implements Initializable {
                 }
                
                }
- //----------------------------------------------------------------------------------------------------              
+//----------------------------------------------------------------------------------------------
+
 
 
                     }
-                
-         x.close(); // Close the scanner after use
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("No User Found");
             alert.setContentText("SIGN UP FIRST or (GIVEN THE ACCURATE INFORMATION)");
@@ -263,6 +262,7 @@ public class LoginSceneController implements Initializable {
 
     @FXML
     private void closeEyeOnMouseClicked(MouseEvent event) {
+
        passwordShowTextField.setText(passwordTextField.getText());
        passwordTextField.setVisible(false);
         passwordShowTextField.setVisible(true);

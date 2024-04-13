@@ -14,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -33,11 +35,31 @@ public class AccountantDashboardController implements Initializable {
     }    
 
     @FXML
-    private void checkDuesButtonOnClick(ActionEvent event) {
+    private void checkDuesButtonOnClick(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("DueNotifactionScene.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene DueNotificationScene = new Scene(parent);
+        currentStage.setScene( DueNotificationScene );
+        currentStage.show();
     }
 
     @FXML
-    private void salaryManagementButtonOnClick(ActionEvent event) {
+    private void salaryManagementButtonOnClick(ActionEvent event) throws IOException {
+           FXMLLoader loader = new FXMLLoader(getClass().getResource("SalaryManagement.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene DueNotificationScene = new Scene(parent);
+        currentStage.setScene( DueNotificationScene );
+        currentStage.show();
     }
 
     @FXML
@@ -63,11 +85,59 @@ public class AccountantDashboardController implements Initializable {
     }
 
     @FXML
-    private void resignationButtonOnClick(ActionEvent event) {
+    private void resignationButtonOnClick(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("AccountantResignationScene.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene ExpenseDetailsScene = new Scene(parent);
+        currentStage.setScene( ExpenseDetailsScene );
+        currentStage.show();
+    }
+
+//    @FXML
+//    private void checkDuesButtonOnClick(MouseEvent event) {
+//    }
+
+    @FXML
+    private void logOutButtonOnClick(ActionEvent event) throws IOException {
+         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout Confirmation");
+        alert.setHeaderText("Logout Successfully");
+        alert.setContentText("Do you want to Logout ? If not then click Cancel");
+        
+        if(alert.showAndWait().get()==ButtonType.OK){
+        Parent singup=FXMLLoader.load(getClass().getResource("/mainpkg/LoginScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+    }
     }
 
     @FXML
-    private void checkDuesButtonOnClick(MouseEvent event) {
+    private void feedBackButtonOnClick(ActionEvent event) {
+    }
+
+//    @FXML
+//    private void checkDuesButtonOnClick(MouseEvent event) {
+//    }
+
+    @FXML
+    private void taxButtonOnClick(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("DueTaxNotification.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene ExpenseDetailsScene = new Scene(parent);
+        currentStage.setScene( ExpenseDetailsScene );
+        currentStage.show();
     }
     
 }

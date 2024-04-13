@@ -45,7 +45,7 @@
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="44.0" layoutY="64.0" mnemonicParsing="false" onAction="#brandAwarenessOnActionButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Brand Awareness" textFill="WHITE">
+            <Button layoutX="34.0" layoutY="60.0" mnemonicParsing="false" onAction="#brandAwarenessOnActionButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Brand Awareness" textFill="WHITE">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
