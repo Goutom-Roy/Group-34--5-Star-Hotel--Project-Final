@@ -78,6 +78,7 @@ public class IT_ManagerBudgetDashBoardController implements Initializable {
         itbudgetData.add(new Budget(130221.12, 100333.21, 2023));
         budgettableView.setItems(itbudgetData);
         
+        
     }    
 
     @FXML
