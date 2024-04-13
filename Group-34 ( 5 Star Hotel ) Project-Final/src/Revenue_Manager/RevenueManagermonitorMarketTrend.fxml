@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RevenueManager.RevenueManagermonitorMarketTrendController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="944.0">
+         <children>
+            <Button fx:id="Nextbuttonfxid" layoutX="492.0" layoutY="446.0" mnemonicParsing="false" onAction="#Onclicknextbutton" prefHeight="39.0" prefWidth="150.0" text="Next" />
+            <TextField fx:id="trendnamefxid" layoutX="402.0" layoutY="136.0" prefHeight="27.0" prefWidth="170.0" />
+            <TextField fx:id="trendescriptionfxid" layoutX="167.0" layoutY="205.0" prefHeight="211.0" prefWidth="640.0" />
+            <Label layoutX="311.0" layoutY="140.0" prefHeight="18.0" prefWidth="256.0" text="Trend Name:" />
+            <Label layoutX="26.0" layoutY="292.0" prefHeight="18.0" prefWidth="262.0" text="Trend Description:" />
+            <Button fx:id="Savebuttonfxid" layoutX="311.0" layoutY="446.0" mnemonicParsing="false" onAction="#OnclickSavebutton" prefHeight="39.0" prefWidth="150.0" text="Save" />
+            <Text layoutX="271.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Monitor Market Trend" wrappingWidth="567.7364807128906">
+               <font>
+                  <Font name="Bookman Old Style" size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

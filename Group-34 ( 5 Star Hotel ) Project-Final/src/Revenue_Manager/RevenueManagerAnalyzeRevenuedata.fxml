@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RevenueManager.RevenueManagerAnalyzeRevenuedataController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-6.0" layoutY="-8.0" prefHeight="662.0" prefWidth="1006.0">
+         <children>
+            <Text layoutX="28.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date " wrappingWidth="112.22069931030273" />
+            <DatePicker fx:id="StartDateField" layoutX="98.0" layoutY="129.0" />
+            <Text layoutX="28.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date" wrappingWidth="112.22069931030268" />
+            <DatePicker fx:id="EndDateField" layoutX="98.0" layoutY="211.0" />
+            <Label fx:id="Analyzerevenuelabel" alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="298.0" prefHeight="253.0" prefWidth="475.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Button layoutX="407.0" layoutY="200.0" mnemonicParsing="false" onAction="#Onclickanalyzebutton" prefHeight="46.0" prefWidth="150.0" text="Analyze" />
+            <Button fx:id="Nextbuttonfxid" layoutX="604.0" layoutY="200.0" mnemonicParsing="false" onAction="#Onclicknextbutton" prefHeight="46.0" prefWidth="150.0" text="Next" />
+            <ComboBox fx:id="ComboBox" layoutX="126.0" layoutY="273.0" prefHeight="26.0" prefWidth="119.0" />
+            <Label fx:id="analyzeData" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="338.0" prefHeight="236.0" prefWidth="813.0">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Label layoutX="20.0" layoutY="277.0" prefHeight="18.0" prefWidth="155.0" text="Select category" />
+            <Text layoutX="260.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Analyze Revenue Data " wrappingWidth="567.7364807128906">
+               <font>
+                  <Font name="Bookman Old Style" size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
