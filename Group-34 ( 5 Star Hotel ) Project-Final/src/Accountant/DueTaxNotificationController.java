@@ -27,10 +27,10 @@ import org.controlsfx.control.Notifications;
  *
  * @author ASUS
  */
-public class DueNotificationSceneController implements Initializable {
+public class DueTaxNotificationController implements Initializable {
 
     @FXML
-    private Button DueNotificationsButton;
+    private Button TaxNotificationsButton;
 
     /**
      * Initializes the controller class.
@@ -41,19 +41,18 @@ public class DueNotificationSceneController implements Initializable {
     }    
 
     @FXML
-    private void dueNotificationsButtonOnClick(ActionEvent event) {
+    private void TaxNotificationsButtonOnClick(ActionEvent event) {
          Notifications notificationBuilder=Notifications.create()
-                .title("You have some pending dues.Pay the dues")
+                .title("You have some taxes due this year.Pay the tax by the due date")
                 .text("Saved")
                 .hideAfter(Duration.seconds(5))
                 .position(Pos.TOP_RIGHT);
                 notificationBuilder.show();
-        
     }
 
     @FXML
-    private void viewPendingDuesButtonOnClick(ActionEvent event) throws IOException {
-         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewPendingDueDetails.fxml"));
+    private void viewTaxesButtonOnClick(ActionEvent event) throws IOException {
+           FXMLLoader loader = new FXMLLoader(getClass().getResource("TaxDetails.fxml"));
         Parent parent = loader.load();
 
         
@@ -64,13 +63,11 @@ public class DueNotificationSceneController implements Initializable {
 
         currentStage.setScene(UserViewScene);
         currentStage.show(); 
-        
-        
     }
 
     @FXML
     private void logOutButtonOnClick(ActionEvent event) throws IOException {
-           Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+          Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout Confirmation");
         alert.setHeaderText("Logout Successfully");
         alert.setContentText("Do you want to Logout ? If not then click Cancel");
