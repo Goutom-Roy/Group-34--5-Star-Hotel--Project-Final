@@ -25,6 +25,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -53,6 +55,18 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
     private PasswordField newPassWordTextField;
     @FXML
     private PasswordField confirmPassWordTextField;
+    @FXML
+    private TextField shownewpass;
+    @FXML
+    private TextField showcompass;
+    @FXML
+    private ImageView closeEye;
+    @FXML
+    private ImageView openEye;
+    @FXML
+    private ImageView clseEyecon;
+    @FXML
+    private ImageView openEyecon;
 
     /**
      * Initializes the controller class.
@@ -65,8 +79,16 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
               userComboBox.getItems().addAll("CEO", "IT Manager", "Sales Manager", "Revenue Manager",
                 "Restaurant Manager", "Accountant", "Hotel Receptionist",
                 "Security Manager", "Customer", "Staff");
+                   // Add a listener to synchronize passwordShowTextField with passwordTextField
+    shownewpass.textProperty().bindBidirectional(newPassWordTextField.textProperty());
+    showcompass.textProperty().bindBidirectional(confirmPassWordTextField.textProperty());
         emailAnchorpane.setVisible(true);
         updatepassAnchorPane.setVisible(false);
+        
+    openEye.setVisible(false);
+    openEyecon.setVisible(false);
+    showcompass.setVisible(false);
+    shownewpass.setVisible(false);
     }    
 
     @FXML
@@ -83,7 +105,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
         String userDob = "";
         String user1 = "";
         try {
-             File file = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserDetails.txt");
+             File file = new File("LoginUserDetails.txt");
             Scanner scanner = new Scanner(file);
             scanner.useDelimiter("[;\n]");
             
@@ -142,10 +164,10 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
 
        
        try {
-        File file = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserDetails.txt");
+        File file = new File("LoginUserDetails.txt");
          File passInfoFile = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/Updatepassinfo.txt");
-        File userInfoFile = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserInfo.txt");
-        File tempFile = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserDetails_temp.txt");
+        File userInfoFile = new File("LoginUserInfo.txt");
+        File tempFile = new File("LoginUserDetails_temp.txt");
          
         Scanner userScanner = new Scanner(userInfoFile);
          FileWriter userWriter = new FileWriter(userInfoFile);
@@ -226,5 +248,38 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
     }
        
     } 
+
+    @FXML
+    private void nhideEye(MouseEvent event) {
+        
+        newPassWordTextField.setVisible(false);
+       shownewpass.setVisible(true);
+        openEye.setVisible(true);
+        closeEye.setVisible(false);
+    }
+
+    @FXML
+    private void nopenEye(MouseEvent event) {
+        newPassWordTextField.setVisible(true);
+       shownewpass.setVisible(false);
+        openEye.setVisible(false);
+        closeEye.setVisible(true);
+    }
+
+    @FXML
+    private void chideEye(MouseEvent event) {
+        confirmPassWordTextField.setVisible(false);
+       showcompass.setVisible(true);
+        openEyecon.setVisible(true);
+        clseEyecon.setVisible(false);
+    }
+
+    @FXML
+    private void copenEye(MouseEvent event) {
+       confirmPassWordTextField.setVisible(true);
+       showcompass.setVisible(false);
+        openEyecon.setVisible(false);
+        clseEyecon.setVisible(true);
+    }
     
 }
