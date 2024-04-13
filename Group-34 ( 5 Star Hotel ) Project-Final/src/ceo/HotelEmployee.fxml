@@ -8,13 +8,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ceo.HotelEmployeeController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceo.HotelEmployeeController">
    <children>
       <Button layoutX="192.0" layoutY="418.0" mnemonicParsing="false" onAction="#addnewEmployeeActionButton" prefHeight="59.0" prefWidth="151.0" text="Add new Employee" />
       <Button layoutX="482.0" layoutY="418.0" mnemonicParsing="false" onAction="#EmployeeDetailsActionButton" prefHeight="59.0" prefWidth="151.0" text="Employee Details" />
-      <TableView fx:id="tableView" layoutX="123.0" layoutY="549.0" prefHeight="237.0" prefWidth="754.0">
+      <TableView fx:id="tableView" layoutX="48.0" layoutY="540.0" prefHeight="237.0" prefWidth="754.0">
         <columns>
           <TableColumn fx:id="idColum" prefWidth="107.0" text="ID" />
           <TableColumn fx:id="nameColum" prefWidth="255.0" text="Name" />
@@ -30,5 +30,10 @@
       <TextField fx:id="nametextField" layoutX="343.0" layoutY="195.0" />
       <ComboBox fx:id="comboBox" layoutX="343.0" layoutY="228.0" prefHeight="31.0" prefWidth="187.0" />
       <DatePicker fx:id="datePicker" layoutX="343.0" layoutY="269.0" prefHeight="21.0" prefWidth="187.0" />
+      <Button layoutX="802.0" layoutY="722.0" mnemonicParsing="false" onAction="#backOnactionButton" prefHeight="63.0" prefWidth="198.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="21.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

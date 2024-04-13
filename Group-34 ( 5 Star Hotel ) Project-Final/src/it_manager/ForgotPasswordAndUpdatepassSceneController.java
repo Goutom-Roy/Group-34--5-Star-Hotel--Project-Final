@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import javafx.event.ActionEvent;
@@ -104,7 +105,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Password Reset");
                     alert.setHeaderText(null);
-                    alert.setContentText("Password reset successful!");
+                    alert.setContentText("Continue to Password reset !");
                     alert.showAndWait();
                     
                     found = true;
@@ -118,8 +119,9 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
                 alert.setHeaderText(null);
-                alert.setContentText("Email and/or Date of Birth do not match.");
+                alert.setContentText("Email and Date of Birth do not match.");
                 alert.showAndWait();
+                return;
             }
 
 
@@ -141,20 +143,23 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
        
        try {
         File file = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserDetails.txt");
+         File passInfoFile = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/Updatepassinfo.txt");
         File userInfoFile = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserInfo.txt");
         File tempFile = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/LoginUserDetails_temp.txt");
          
         Scanner userScanner = new Scanner(userInfoFile);
          FileWriter userWriter = new FileWriter(userInfoFile);
         Scanner scanner = new Scanner(file);
+         FileWriter passInfoWriter = new FileWriter(passInfoFile, true);
         FileWriter writer = new FileWriter(tempFile);
         
-            if (!newPassWordTextField.getText().equals(confirmPassWordTextField.getText())) {
+      if (!newPassWordTextField.getText().equals(confirmPassWordTextField.getText())) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
         alert.setHeaderText(null);
         alert.setContentText("New password and confirmed password do not match.");
         alert.showAndWait();
+        
         return;  
             
     }
@@ -171,7 +176,10 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
             // Update the password if the email matches
             if (email.equals(emailTextField.getText()) && role.equals(userComboBox.getValue())) {
                 
-                password =  newPassword; // Update password
+             password =  newPassword; // Update password
+             passInfoWriter.write(email + ";" + role + ";" + gender + ";" + dob+";"+LocalDate.now()+ "\n");
+             passInfoWriter.close();
+                
             }
 
             // Write the updated line to the temporary file
@@ -179,13 +187,16 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
             
              // Write the updated line to the file
             userWriter.write(email + ";" + password + ";" + role + "\n");
+             
         }
 
         scanner.close();
         writer.close();
+       
         
         userScanner.close();
         userWriter.close();
+         
         
         // Delete the original file and rename the temporary file to the original filename
         if (!file.delete()) {
@@ -211,9 +222,9 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
         addStage.show();
 
     } catch (IOException e) {
-        e.printStackTrace();
+           System.out.println(e);
     }
        
-    }
+    } 
     
 }

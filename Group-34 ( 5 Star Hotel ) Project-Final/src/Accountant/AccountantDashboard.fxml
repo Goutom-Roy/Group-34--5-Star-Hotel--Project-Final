@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="836.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.AccountantDashboardController">
+   <children>
+      <AnchorPane layoutX="-8.0" layoutY="-14.0" prefHeight="851.0" prefWidth="362.0" style="-fx-background-color: #737373;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="163.0" layoutX="102.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/profile-picture-placeholder-icon-design-in-white-vector-37114567.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="#f2f0f0" layoutX="111.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+               <font>
+                  <Font name="System Bold Italic" size="27.0" />
+               </font>
+            </Text>
+            <Text fill="#f2f0f0" layoutX="14.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mosammad Maherun Nesa">
+               <font>
+                  <Font name="System Bold Italic" size="27.0" />
+               </font>
+            </Text>
+            <Line endX="260.0" layoutX="102.0" layoutY="310.0" startX="-102.0" stroke="#f5f2f2" strokeWidth="3.0" />
+            <Button layoutX="126.0" layoutY="786.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-radius: 27;" text="Log Out">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="357.0" layoutY="-1.0" prefHeight="141.0" prefWidth="639.0" style="-fx-background-color: #737373;">
+         <children>
+            <Line endX="-101.0" endY="83.0" layoutX="101.0" layoutY="56.0" startX="-101.0" startY="-55.999977111816406" stroke="#fcfafa" strokeWidth="2.0" />
+            <Text fill="#f8f1f1" layoutX="174.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accountant Dashboard" wrappingWidth="431.1611458361149">
+               <font>
+                  <Font name="System Bold Italic" size="37.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="108.0" fitWidth="175.0" layoutX="40.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/Accounting%20icon.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="553.0" layoutY="171.0" mnemonicParsing="false" onAction="#checkDuesButtonOnClick" prefHeight="57.0" prefWidth="357.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Check Dues" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="551.0" layoutY="253.0" mnemonicParsing="false" onAction="#salaryManagementButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Salary Management" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="551.0" layoutY="335.0" mnemonicParsing="false" onAction="#manageFinancialRecordButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Manage Financial Record" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="551.0" layoutY="419.0" mnemonicParsing="false" onAction="#expenditureButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Expenditure" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="551.0" layoutY="502.0" mnemonicParsing="false" onAction="#profitLossChartButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Profit/Loss Chart" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="550.0" layoutY="582.0" mnemonicParsing="false" onAction="#resignationButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Resignation" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="551.0" layoutY="670.0" mnemonicParsing="false" onAction="#feedBackButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Feedback" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="552.0" layoutY="756.0" mnemonicParsing="false" onAction="#taxButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Tax" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
+
