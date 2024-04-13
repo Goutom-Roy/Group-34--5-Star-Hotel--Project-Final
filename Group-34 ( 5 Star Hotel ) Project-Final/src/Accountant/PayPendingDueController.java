@@ -132,7 +132,7 @@ public class PayPendingDueController implements Initializable {
     @FXML
     private void payButtonOnClick(ActionEvent event) {
          String SupplierName=SupplierNameComboBox.getValue();
-        if(SupplierName.isEmpty()){
+        if(SupplierName==null){
               unfilledSupplierNameComBox.show();
              return;
         }

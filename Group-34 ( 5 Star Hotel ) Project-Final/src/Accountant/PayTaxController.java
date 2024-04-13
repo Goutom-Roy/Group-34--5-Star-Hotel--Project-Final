@@ -62,7 +62,7 @@ public class PayTaxController implements Initializable {
     @FXML
     private void payButtonOnClick(ActionEvent event) {
         String taxId= TaxidComboBox.getValue();
-        if(taxId.isEmpty()){
+        if(taxId==null){
              UnselectTaxIdCombo.show();
              return;
         }

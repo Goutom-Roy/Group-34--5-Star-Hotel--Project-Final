@@ -238,7 +238,7 @@ public class SalaryManagementController implements Initializable {
     @FXML
     private void transferSalaryButtonOnClick(ActionEvent event) {
           String monthName=SelectMonthComboBox.getValue();
-        if(monthName.isEmpty()){
+        if(monthName==null){
              unSelectMonth.show();
              return;
         }
@@ -248,7 +248,7 @@ public class SalaryManagementController implements Initializable {
              return;
         }
          String employeeId=SelectEmployeeIdComboBox.getValue();
-        if( employeeId.isEmpty()){
+        if( employeeId==null){
               unSelectId.show();
              return;
         }
