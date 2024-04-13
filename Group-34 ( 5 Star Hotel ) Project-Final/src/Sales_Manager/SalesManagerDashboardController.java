@@ -1,5 +1,5 @@
 
-package SalesManager;
+package Sales_Manager;
 
 import java.io.IOException;
 import java.net.URL;
