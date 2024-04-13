@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" onDragDetected="#checkDuesButtonOnClick" prefHeight="836.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.AccountantDashboardController">
+<AnchorPane id="AnchorPane" prefHeight="836.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.AccountantDashboardController">
    <children>
       <AnchorPane layoutX="-8.0" layoutY="-14.0" prefHeight="851.0" prefWidth="362.0" style="-fx-background-color: #737373;">
          <children>
@@ -85,5 +85,11 @@
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
+      <Button layoutX="552.0" layoutY="756.0" mnemonicParsing="false" onAction="#taxButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Tax" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
+
