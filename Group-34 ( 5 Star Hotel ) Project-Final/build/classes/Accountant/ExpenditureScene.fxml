@@ -4,6 +4,9 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -13,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="894.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.ExpenditureSceneController">
+<AnchorPane id="AnchorPane" prefHeight="894.0" prefWidth="1233.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.ExpenditureSceneController">
    <children>
       <DatePicker fx:id="ExpenseDatePicker" layoutX="178.0" layoutY="196.0" />
       <ComboBox fx:id="ExpenseCatagoryComboBox" layoutX="178.0" layoutY="281.0" prefHeight="46.0" prefWidth="227.0" promptText="Choose Expense Catagory" />
@@ -58,9 +61,28 @@
                   <Font name="System Bold Italic" size="31.0" />
                </font>
             </Text>
+            <MenuBar fx:id="MenuBar" prefHeight="41.0" prefWidth="1233.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#viewExpenseChartButtonOnClick" text="View Expense Chart" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
          </children>
       </AnchorPane>
-      <Separator layoutX="417.0" layoutY="34.0" orientation="VERTICAL" prefHeight="865.0" prefWidth="5.0" style="-fx-background-color: #737373;" />
+      <Separator layoutX="423.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="905.0" prefWidth="0.0" style="-fx-background-color: #737373;" />
       <TableView fx:id="ExpenseRecordTableView" layoutX="431.0" layoutY="250.0" prefHeight="411.0" prefWidth="801.0">
         <columns>
           <TableColumn fx:id="DateTableColumn" onEditCommit="#dateTableColumnOnEdit" prefWidth="116.0" text="Date" />
