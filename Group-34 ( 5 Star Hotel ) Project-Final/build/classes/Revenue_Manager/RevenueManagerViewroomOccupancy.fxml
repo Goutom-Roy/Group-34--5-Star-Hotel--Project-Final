@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RevenueManager.RevenueManagerViewroomOccupancyController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="8.0" layoutY="-15.0" prefHeight="643.0" prefWidth="866.0">
+         <children>
+            <Label fx:id="roomNumberLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="191.0" layoutY="123.0" prefHeight="162.0" prefWidth="510.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="occupancyLabel" alignment="CENTER" layoutX="191.0" layoutY="307.0" prefHeight="162.0" prefWidth="510.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="Nextbuttonfxid" layoutX="446.0" layoutY="502.0" mnemonicParsing="false" onAction="#Onclicknextbutton" prefHeight="36.0" prefWidth="126.0" text="Next" />
+            <Button fx:id="Savebuttonfxid" layoutX="282.0" layoutY="502.0" mnemonicParsing="false" onAction="#Onclicksavetbutton" prefHeight="36.0" prefWidth="126.0" text="Save" />
+            <Text layoutX="247.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to View Room Occupancy" wrappingWidth="567.7364807128906">
+               <font>
+                  <Font name="Bookman Old Style" size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

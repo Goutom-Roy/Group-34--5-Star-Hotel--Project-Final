@@ -1,0 +1,5 @@
+Booking ID: #1010368
+Guest Name: Ayesha
+Room Type: Single
+Check-in Date: 10-04-2024
+Checkout Date: 20-04-2024
