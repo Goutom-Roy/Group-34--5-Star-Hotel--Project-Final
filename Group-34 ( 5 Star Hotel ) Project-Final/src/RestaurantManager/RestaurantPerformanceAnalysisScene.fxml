@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="847.0" prefWidth="1162.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManager.RestaurantPerformanceAnalysisSceneController">
+   <children>
+      <Text fill="#eeecec" layoutX="154.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Performance Analysis and Customer Satisfaction">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <TableView fx:id="PerformanceAndCustomerSatisfactionAnalysisTableView" layoutX="36.0" layoutY="222.0" prefHeight="460.0" prefWidth="1124.0">
+        <columns>
+          <TableColumn fx:id="DateTableCo" prefWidth="90.0" text="Date" />
+          <TableColumn fx:id="TotalSalesTableCo" prefWidth="122.0" text="Total sales(BDT)" />
+            <TableColumn fx:id="SalesByCatagoryTableCo" prefWidth="419.0" text="Sales by Catagory(BDT)" />
+            <TableColumn fx:id="AverageTransactionValueTableCo" prefWidth="210.0" text="Avg. Transaction Value(BDT)" />
+            <TableColumn fx:id="CustomerSatisfactionTableCo" prefWidth="282.0" text="Customer Satisfaction(Rating out of 5)" />
+        </columns>
+      </TableView>
+      <MenuBar fx:id="MenuBar" layoutX="1.0" prefHeight="36.0" prefWidth="1181.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="1034.0" layoutY="775.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-radius: 27;" text="Log Out" textFill="#141313">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="42.0" layoutY="767.0" mnemonicParsing="false" onAction="#returnToDashboardButtonOnClick" prefHeight="46.0" prefWidth="205.0" style="-fx-background-radius: 27;" text="Return To dashboard" textFill="#141313">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="479.0" layoutY="713.0" mnemonicParsing="false" onAction="#dowmloadReportButtonOnClick" prefHeight="56.0" prefWidth="205.0" style="-fx-background-radius: 27;" text="Download Report" textFill="#a80808">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="92.0" fitWidth="105.0" layoutX="378.0" layoutY="695.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Pdf%20Icon_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

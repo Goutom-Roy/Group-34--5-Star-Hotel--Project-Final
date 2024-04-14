@@ -23,6 +23,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
@@ -259,6 +260,42 @@ public class MenuManagementController implements Initializable {
 
     @FXML
     private void deleteButtonOnClick(ActionEvent event) {
+         String Id=IdtextField.getText();
+        if(Id.isEmpty()){
+            unfilledTextField.show();
+            return;
+        }
+         String itemName=ItemNameTextField.getText();
+        if(itemName.isEmpty()){
+            unfilledTextField.show();
+            return;
+        }
+         String itemtype=ItemTypeComboBox.getValue();
+        if(itemtype.isEmpty()){
+            unfilledItemTypeComBox.show();
+            return;
+        }
+         String itemDescription=ItemDescriptionTextField.getText();
+        if(itemDescription.isEmpty()){
+            unfilledTextField.show();
+            return;
+        }
+         String quantity=QuantityTextField.getText();
+        if(quantity.isEmpty()){
+            unfilledTextField.show();
+            return;
+        }
+         String price=priceTextField.getText();
+        if(price.isEmpty()){
+            unfilledTextField.show();
+            return;
+        }
+         String status=StatusComboBox.getValue();
+        if(status.isEmpty()){
+            unfilledStatusCBox.show();
+            return;
+        }
+        
         ObservableList<Food> SelectedItem,allItem;
         allItem=ItemDetailsTableView.getItems();
        SelectedItem= ItemDetailsTableView.getSelectionModel().getSelectedItems();
@@ -358,7 +395,19 @@ public class MenuManagementController implements Initializable {
     }
 
     @FXML
-    private void logOutButtonOnClick(ActionEvent event) {
+    private void logOutButtonOnClick(ActionEvent event) throws IOException {
+         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout Confirmation");
+        alert.setHeaderText("Logout Successfully");
+        alert.setContentText("Do you want to Logout ? If not then click Cancel");
+        
+        if(alert.showAndWait().get()==ButtonType.OK){
+        Parent singup=FXMLLoader.load(getClass().getResource("/mainpkg/LoginScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+    }
     }
     
 }
