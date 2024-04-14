@@ -17,8 +17,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -50,8 +48,7 @@ public class ViewSelectedItemController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        
+        // TODO
     }    
 
     @FXML
@@ -87,19 +84,7 @@ public class ViewSelectedItemController implements Initializable {
     }
 
     @FXML
-    private void LogOutButtonOnClick(ActionEvent event) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout Confirmation");
-        alert.setHeaderText("Logout Successfully");
-        alert.setContentText("Do you want to Logout ? If not then click Cancel");
-        
-        if(alert.showAndWait().get()==ButtonType.OK){
-        Parent singup=FXMLLoader.load(getClass().getResource("/mainpkg/LoginScene.fxml"));
-        Scene newScene=new Scene(singup);
-        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
-        stg1.setScene(newScene);
-        stg1.show();
-    }
+    private void LogOutButtonOnClick(ActionEvent event) {
     }
 
     void initData(Food selectedItem, ObservableList<Food> foodList) {

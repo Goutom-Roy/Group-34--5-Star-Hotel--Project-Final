@@ -23,7 +23,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
@@ -75,6 +74,7 @@ public class MenuManagementController implements Initializable {
      Alert unfilledTextField=new Alert(Alert.AlertType.WARNING,"Please enter everything");
      Alert unfilledItemTypeComBox=new Alert(Alert.AlertType.WARNING,"Please Choose Item Type");
       Alert unfilledStatusCBox=new Alert(Alert.AlertType.WARNING,"Please Choose Status");
+      Alert unSelectRow=new Alert(Alert.AlertType.WARNING,"Please Select the item from the table");
 
     //Alert success=new Alert(Alert.AlertType.INFORMATION,"Successfully Added");
     Alert addedTable=new Alert(Alert.AlertType.INFORMATION,"Successfully Added To Table");
@@ -196,7 +196,7 @@ public class MenuManagementController implements Initializable {
              Food u = new Food(IdtextField.getText(),ItemNameTextField.getText(),ItemTypeComboBox.getValue(),ItemDescriptionTextField.getText(),QuantityTextField.getText(), priceTextField.getText(),StatusComboBox.getValue());
              ItemDetailsTableView.getItems().addAll(u);
             
-            FileOutputStream fos = new FileOutputStream("foodStorage.bin", true);
+            FileOutputStream fos = new FileOutputStream("Food_Storage.txt", true);
             DataOutputStream dos = new DataOutputStream(fos);
             
             dos.writeUTF(u.getId());
@@ -208,7 +208,7 @@ public class MenuManagementController implements Initializable {
             dos.writeUTF(u.getStatus());
             //read-----------------------------------
             
-            FileInputStream fis = new FileInputStream("foodStorage.bin");
+            FileInputStream fis = new FileInputStream("Food_Storage.txt");
             DataInputStream dis = new DataInputStream(fis);
 
             ObservableList<Food> ItemsList = FXCollections.observableArrayList();
@@ -270,6 +270,11 @@ public class MenuManagementController implements Initializable {
 
     @FXML
     private void viewSelectedItemButtonOnClick(ActionEvent event) throws IOException {
+        Food SelectedItem=ItemDetailsTableView.getSelectionModel().getSelectedItem();
+        if(SelectedItem==null){
+            unSelectRow.show();
+            return;
+        }
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewSelectedItem.fxml"));
         Parent parent = loader.load();
@@ -353,19 +358,7 @@ public class MenuManagementController implements Initializable {
     }
 
     @FXML
-    private void logOutButtonOnClick(ActionEvent event) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout Confirmation");
-        alert.setHeaderText("Logout Successfully");
-        alert.setContentText("Do you want to Logout ? If not then click Cancel");
-        
-        if(alert.showAndWait().get()==ButtonType.OK){
-        Parent singup=FXMLLoader.load(getClass().getResource("/mainpkg/LoginScene.fxml"));
-        Scene newScene=new Scene(singup);
-        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
-        stg1.setScene(newScene);
-        stg1.show();
-    }
+    private void logOutButtonOnClick(ActionEvent event) {
     }
     
 }
