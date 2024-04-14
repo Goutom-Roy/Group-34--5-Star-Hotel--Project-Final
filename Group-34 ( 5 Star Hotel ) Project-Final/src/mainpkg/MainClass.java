@@ -14,6 +14,12 @@ import javafx.stage.Stage;
  *
  * @author gouto
  */
+
+
+/**
+ *
+ * @author gouto
+ */
 public class MainClass extends Application {
     
     @Override
