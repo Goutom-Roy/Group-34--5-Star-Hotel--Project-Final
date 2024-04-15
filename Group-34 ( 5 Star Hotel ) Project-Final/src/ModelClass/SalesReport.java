@@ -1,20 +1,15 @@
 
-
 package ModelClass;
-
-
 
 public class SalesReport {
     private String reportName;
     private String reportDetails;
 
- 
     public SalesReport(String reportName, String reportDetails) {
         this.reportName = reportName;
         this.reportDetails = reportDetails;
     }
 
-  
     public String getReportName() {
         return reportName;
     }
@@ -30,7 +25,12 @@ public class SalesReport {
     public void setReportDetails(String reportDetails) {
         this.reportDetails = reportDetails;
     }
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "SalesReport{" +
+                "reportName='" + reportName + '\'' +
+                ", reportDetails='" + reportDetails + '\'' +
+                '}';
+    }
 }

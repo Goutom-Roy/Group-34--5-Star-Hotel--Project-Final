@@ -1,11 +1,9 @@
-
 package ModelClass;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-
 
 public class ManageDiscount {
     private final StringProperty name;
@@ -17,8 +15,6 @@ public class ManageDiscount {
         this.amount = new SimpleDoubleProperty(amount);
         this.status = new SimpleStringProperty(status);
     }
-
-   
 
     public String getName() {
         return name.get();
@@ -55,6 +51,13 @@ public class ManageDiscount {
     public void setStatus(String status) {
         this.status.set(status);
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "ManageDiscount{" +
+                "name=" + name.get() +
+                ", amount=" + amount.get() +
+                ", status=" + status.get() +
+                '}';
+    }
 }

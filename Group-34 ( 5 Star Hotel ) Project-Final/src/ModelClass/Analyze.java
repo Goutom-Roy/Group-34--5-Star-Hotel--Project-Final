@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class Analyze{
 
 
-public class RevenueData {
+    public class RevenueData {
     private LocalDate startDate;
     private LocalDate endDate;
     private String category;
@@ -51,9 +51,22 @@ public class RevenueData {
     public void setRevenue(double revenue) {
         this.revenue = revenue;
     }
+
+    @Override
+    public String toString() {
+        return "RevenueData{" +
+                "startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", category='" + category + '\'' +
+                ", revenue=" + revenue +
+                '}';
+    }
+}
+    
+    
+    
     
 
 }
 
 
-}
