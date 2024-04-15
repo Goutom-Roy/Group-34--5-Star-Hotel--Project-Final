@@ -1,24 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
-package Sales_Manager;
 
+
+package SalesManager;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author gouto
- */
 public class SalesmanagerupdateBookingdetailsController implements Initializable {
 
     @FXML
@@ -44,20 +45,52 @@ public class SalesmanagerupdateBookingdetailsController implements Initializable
     @FXML
     private TextField Roomratesfxid;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       
     }    
 
     @FXML
     private void OnclickUpdatebutton(ActionEvent event) {
+        String guestName = Guestfieldfxid.getText();
+        int numberOfGuests = Integer.parseInt(Numberofguestfieldfxid.getText());
+        String phoneNumber = PhoneNumberfield.getText();
+        String roomType = Roomtypefield.getText();
+        int totalRoom = Integer.parseInt(Totalroomfield.getText());
+        LocalDate checkinDate = CheckinDatefxid.getValue(); 
+        LocalDate checkoutDate = CheckoutDatefxid.getValue();
+        double roomRate = Double.parseDouble(Roomratesfxid.getText());
+        
+        String bookingInfo = String.format(
+            "Guest Name: %s\nNumber of Guests: %d\nPhone Number: %s\nRoom Type: %s\nTotal Room: %d\nCheck-in Date: %s\nCheckout Date: %s\nRoom Rate: %.2f\n",
+            guestName, numberOfGuests, phoneNumber, roomType, totalRoom, checkinDate, checkoutDate, roomRate
+        );
+        
+        Textareafieldfxid.setText(bookingInfo);
+        
+     
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("BookingInfo.txt"))) {
+            writer.write(bookingInfo);
+        } catch (IOException e) {
+            e.printStackTrace();
+            Textareafieldfxid.setText("Error occurred while saving data.");
+        }
     }
 
     @FXML
-    private void Onclicknextbutton(ActionEvent event) {
+    private void Onclicknextbutton(ActionEvent event) throws IOException {
+       
+        Stage stage = null;
+        Parent root = null;
+        
+        if (event.getSource() == Nextbuttonfxid) {
+            stage = (Stage) Nextbuttonfxid.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("SalesmanagerCancelBooking.fxml"));
+        }
+     
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("CancelBooking");
+        stage.show();
     }
-    
 }
