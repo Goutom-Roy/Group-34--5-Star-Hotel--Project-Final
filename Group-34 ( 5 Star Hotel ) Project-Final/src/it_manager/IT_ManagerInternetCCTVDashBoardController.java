@@ -69,7 +69,7 @@ public class IT_ManagerInternetCCTVDashBoardController implements Initializable 
         internetSpeedTimeline.play();
 
         // Load the video file
-        String videoPath = "C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/CCTV.mp4";
+        String videoPath = "CCTV.mp4";
         Media media = new Media(new File(videoPath).toURI().toString());
 
         // Create the MediaPlayer

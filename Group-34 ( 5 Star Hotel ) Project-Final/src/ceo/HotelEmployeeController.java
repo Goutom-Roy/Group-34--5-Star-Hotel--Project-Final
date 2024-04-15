@@ -100,7 +100,7 @@ public class HotelEmployeeController implements Initializable {
             Employee u = new Employee(Integer.parseInt(idtextField.getText()),
                     nametextField.getText(), comboBox.getValue(), datePicker.getValue());
             
-            FileOutputStream fos = new FileOutputStream("C:/Users/gouto/Netbeans files1/Group Projects/Group-34 ( 5 Star Hotel ) Project/src/files/EmployeeDetailes.bin", true);
+            FileOutputStream fos = new FileOutputStream("EmployeeDetailes.bin", true);
             DataOutputStream dos = new DataOutputStream(fos);
             
             dos.writeInt(u.getId());
@@ -112,7 +112,7 @@ public class HotelEmployeeController implements Initializable {
                
 //  --------------------------------------
 //read
-    FileInputStream fis = new FileInputStream("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/EmployeeDetailes.bin");
+    FileInputStream fis = new FileInputStream("EmployeeDetailes.bin");
     DataInputStream dis = new DataInputStream(fis);
 
     ObservableList<Employee> employeeList = FXCollections.observableArrayList();

@@ -1,0 +1,6 @@
+231522;SPA;Not_available
+234223;Personalized Butler;Non-active
+234222;Meeting Room;Available
+234212;Fitness Training Center;Active
+235212;Pool and Training Center;Active
+225212;VIP Lounger;Non-active

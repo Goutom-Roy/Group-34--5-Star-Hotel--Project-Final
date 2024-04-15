@@ -73,7 +73,7 @@ public class CEO_BudgetDashBardSceneController implements Initializable {
 
 
     private void loadDataFromFile() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("C:/Users/gouto/Netbeans files1/Group Projects/Group-34 ( 5 Star Hotel ) Project/src/files/Budgetinfo.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Budgetinfo.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(";");

@@ -151,6 +151,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
         updatepassAnchorPane.setVisible(true);
                 
         } catch (Exception e) {
+            System.out.println(e);
         }    
     }
 
@@ -175,7 +176,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
        
        try {
         File file = new File("LoginUserDetails.txt");
-         File passInfoFile = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/Updatepassinfo.txt");
+         File passInfoFile = new File("Updatepassinfo.txt");
         File userInfoFile = new File("LoginUserInfo.txt");
         File tempFile = new File("LoginUserDetails_temp.txt");
          
@@ -201,7 +202,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
                 
              password =  newPassword; // Update password
              passInfoWriter.write(email + ";" + role + ";" + gender + ";" + dob+";"+LocalDate.now()+ "\n");
-             passInfoWriter.close();
+             
                 
             }
 
@@ -219,6 +220,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
         
         userScanner.close();
         userWriter.close();
+        passInfoWriter.close();
          
         
         // Delete the original file and rename the temporary file to the original filename

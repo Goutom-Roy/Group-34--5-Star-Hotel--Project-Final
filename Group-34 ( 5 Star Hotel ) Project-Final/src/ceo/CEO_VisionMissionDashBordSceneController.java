@@ -38,7 +38,7 @@ public class CEO_VisionMissionDashBordSceneController implements Initializable {
     private TextArea strategyTextArea;
 
 // File path to save vision, mission, and strategy
-    private final String FILE_PATH = "C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/Vision_mission_strategy.txt";
+    private final String FILE_PATH = "Vision_mission_strategy.txt";
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
