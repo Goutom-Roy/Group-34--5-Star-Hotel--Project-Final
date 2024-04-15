@@ -121,7 +121,7 @@ public class CEO_ServicesDashBoardController implements Initializable {
     private void displayServiceStatus(String serviceCode) {
         
     try (
-            BufferedReader br = new BufferedReader(new FileReader("C:/Users/gouto/Netbeans files1/Group Projects/Group-34 ( 5 Star Hotel ) Project/src/files/Services.txt"))
+            BufferedReader br = new BufferedReader(new FileReader("Services.txt"))
             ) 
     {
         String line;

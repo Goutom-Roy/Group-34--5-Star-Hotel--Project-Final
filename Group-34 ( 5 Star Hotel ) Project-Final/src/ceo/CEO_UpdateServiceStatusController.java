@@ -37,7 +37,7 @@ public class CEO_UpdateServiceStatusController implements Initializable {
     private ComboBox<String> statuscomboBox1;
 
     // File path for the services data
-    private static final String FILE_PATH = "C:/Users/gouto/Netbeans files1/Group Projects/Group-34 ( 5 Star Hotel ) Project/src/files/Services.txt";
+    private static final String FILE_PATH = "Services.txt";
     @FXML
     private Label statusLabel;
 

@@ -68,7 +68,7 @@ public class CEO_MeetingController implements Initializable {
          try {
             
        
-        FileReader f= new FileReader("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/files/Meetings.txt");
+        FileReader f= new FileReader("Meetings.txt");
         
         BufferedReader reader = new BufferedReader(f);
         

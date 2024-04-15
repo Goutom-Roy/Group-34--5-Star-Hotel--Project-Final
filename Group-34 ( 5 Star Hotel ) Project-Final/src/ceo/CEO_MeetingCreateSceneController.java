@@ -48,7 +48,7 @@ public class CEO_MeetingCreateSceneController implements Initializable {
     @FXML
     private void AddmeetingOnActionButton(ActionEvent event) {
         try {
-            FileWriter w = new FileWriter("C:/Users/gouto/Netbeans files1/Group Projects/Group-34 ( 5 Star Hotel ) Project/src/files/Meetings.txt",true);
+            FileWriter w = new FileWriter("Meetings.txt",true);
             w.write( topictextfield.getText().toString() +";"+ timetextField.getText().toString()+";"+ 
               datePicker.getValue().toString()+";"+locationtextField.getText().toString()+"\n"); 
             w.close();
