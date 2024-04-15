@@ -12,3 +12,5 @@ g@gmail.com;12345;Restaurant Manager;Male;2024-04-10
 g@gmail.com;12345;Accountant;Male;2024-04-10
 g@gmail.com;12345;Revenue Manager;Male;2024-04-10
 g@gmail.com;12345;Sales Manager;Male;2024-04-10
+g@gmail.com;12345;Sales Manager;Male;2024-04-10
+g@gmail.com;12345;Revenue Manager;Male;2024-04-10

@@ -1,4 +1,4 @@
-package SalesManager;
+package Sales_Manager;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
