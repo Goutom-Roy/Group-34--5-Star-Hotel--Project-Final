@@ -43,7 +43,7 @@
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Label>
-      <Label layoutX="232.0" layoutY="509.0" prefHeight="39.0" prefWidth="224.0" text="Payment Method:" textFill="#fcf5f5">
+      <Label layoutX="227.0" layoutY="570.0" prefHeight="39.0" prefWidth="224.0" text="Payment Method:" textFill="#fcf5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
@@ -87,9 +87,9 @@
           </Menu>
         </menus>
       </MenuBar>
-      <TextField fx:id="PaymentMethodTextField" layoutX="471.0" layoutY="509.0" prefHeight="39.0" prefWidth="215.0" />
-      <TextField fx:id="StatusTextField" layoutX="471.0" layoutY="570.0" prefHeight="39.0" prefWidth="215.0" />
-      <Label layoutX="233.0" layoutY="570.0" prefHeight="39.0" prefWidth="224.0" text="Status:" textFill="#fcf5f5">
+      <TextField fx:id="PaymentMethodTextField" layoutX="471.0" layoutY="570.0" prefHeight="39.0" prefWidth="215.0" />
+      <TextField fx:id="StatusTextField" layoutX="471.0" layoutY="509.0" prefHeight="39.0" prefWidth="215.0" />
+      <Label layoutX="241.0" layoutY="509.0" prefHeight="39.0" prefWidth="224.0" text="Status:" textFill="#fcf5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>

@@ -4,11 +4,25 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/ceo/CEO_BudgetDashBardSceneController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/SolveCustomerIssueController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/ModelClass/EmployeeFeedback.java</file>
             <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/MenuManagementController.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/RestaurantManagerDeshBoardController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/Accountant/ViewPendingDueDetailsController.java</file>
             <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/mainpkg/MainClass.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/ViewSelectedItemController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/ModelClass/CustomerIssue.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/Accountant/ViewPastDueRecordsController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/CustomerIssueController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/RestaurantPerformanceAnalysisSceneController.java</file>
             <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/files/Food_Storage.txt</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/OverallAnalysisController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/files/SalaryData.bin</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/Accountant/AccountantDashboardController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/OrderAnalysisPieChartController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/ModelClass/Analysis.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/RestaurantManagerDeshBoardController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/ViewSelectedItemController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/RestaurantManager/RestaurantManagerFeedbackSceneController.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/Group-34--5-Star-Hotel--Project-Final/Group-34%20(%205%20Star%20Hotel%20)%20Project-Final/src/Accountant/AccountantFeedbackSceneController.java</file>
         </group>
     </open-files>
 </project-private>

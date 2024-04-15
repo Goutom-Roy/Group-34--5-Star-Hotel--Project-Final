@@ -19,10 +19,10 @@
       </Text>
       <TableView fx:id="ViewPendingDueTableView" layoutX="99.0" layoutY="208.0" prefHeight="460.0" prefWidth="963.0">
         <columns>
-          <TableColumn fx:id="supplierTableColumn" prefWidth="122.00003051757812" text="Supplier" />
-          <TableColumn fx:id="InvoiceNumberTableColumn" prefWidth="139.0" text="Invoice Number" />
-            <TableColumn fx:id="InvoiceDateTableColumn" prefWidth="124.0" text="Invoice Date" />
-            <TableColumn fx:id="DueDateTableColumn" prefWidth="164.0" text="Due Date" />
+          <TableColumn fx:id="supplierTableColumn" prefWidth="208.0" text="Supplier" />
+          <TableColumn fx:id="InvoiceNumberTableColumn" prefWidth="120.0" text="Invoice Number" />
+            <TableColumn fx:id="InvoiceDateTableColumn" prefWidth="120.0" text="Invoice Date" />
+            <TableColumn fx:id="DueDateTableColumn" prefWidth="102.0" text="Due Date" />
             <TableColumn fx:id="AmountTableColumn" prefWidth="153.0" text="Amount(BDT)" />
             <TableColumn fx:id="StatusTableColumn" prefWidth="148.0" text="Status" />
             <TableColumn fx:id="PayMethodtableColumn" prefWidth="112.0" text="Pay Method" />
