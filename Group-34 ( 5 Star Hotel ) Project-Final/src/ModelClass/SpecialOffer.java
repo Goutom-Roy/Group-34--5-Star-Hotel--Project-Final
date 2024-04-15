@@ -1,23 +1,16 @@
-
 package ModelClass;
 
-
-    
-    public class SpecialOffer {
-        
-        
+public class SpecialOffer {
     private String offerName;
     private double discount;
     private boolean availability;
 
-  
     public SpecialOffer(String offerName, double discount, boolean availability) {
         this.offerName = offerName;
         this.discount = discount;
         this.availability = availability;
     }
 
-  
     public String getOfferName() {
         return offerName;
     }
@@ -42,10 +35,16 @@ package ModelClass;
         this.availability = availability;
     }
 
-    
-} 
- 
-    
+    @Override
+    public String toString() {
+        return "SpecialOffer{" +
+                "offerName='" + offerName + '\'' +
+                ", discount=" + discount +
+                ", availability=" + availability +
+                '}';
+    }
+}
+
 
 
     

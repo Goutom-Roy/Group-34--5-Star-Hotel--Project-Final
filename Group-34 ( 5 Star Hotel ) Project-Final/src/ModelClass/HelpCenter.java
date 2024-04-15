@@ -2,21 +2,16 @@
 
 package ModelClass;
 
-
 public class HelpCenter {
     private String helpCategory;
     private String helpName;
     private String helpDetails;
 
-
     public HelpCenter(String helpCategory, String helpName, String helpDetails) {
-        
         this.helpCategory = helpCategory;
         this.helpName = helpName;
         this.helpDetails = helpDetails;
-        
     }
-
 
     public String getHelpCategory() {
         return helpCategory;
@@ -41,6 +36,13 @@ public class HelpCenter {
     public void setHelpDetails(String helpDetails) {
         this.helpDetails = helpDetails;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "HelpCenter{" +
+                "helpCategory='" + helpCategory + '\'' +
+                ", helpName='" + helpName + '\'' +
+                ", helpDetails='" + helpDetails + '\'' +
+                '}';
+    }
 }

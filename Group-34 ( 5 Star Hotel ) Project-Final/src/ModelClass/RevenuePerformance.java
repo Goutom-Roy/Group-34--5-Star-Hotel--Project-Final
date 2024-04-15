@@ -1,13 +1,14 @@
 
 package ModelClass;
 
-public class RevenuePerformance {
-    private String month;
-    private int revenue;
 
-    public RevenuePerformance(String month, int revenue) {
+public class SalesPerformance {
+    private String month;
+    private int salesAmount;
+
+    public SalesPerformance(String month, int salesAmount) {
         this.month = month;
-        this.revenue = revenue;
+        this.salesAmount = salesAmount;
     }
 
     public String getMonth() {
@@ -18,14 +19,12 @@ public class RevenuePerformance {
         this.month = month;
     }
 
-    public int getRevenue() {
-        return revenue;
+    public int getSalesAmount() {
+        return salesAmount;
     }
 
-    public void setRevenue(int revenue) {
-        this.revenue = revenue;
+    public void setSalesAmount(int salesAmount) {
+        this.salesAmount = salesAmount;
     }
-    
-     
-    
 }
+

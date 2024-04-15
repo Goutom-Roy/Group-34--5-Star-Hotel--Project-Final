@@ -1,4 +1,3 @@
-
 package ModelClass;
 
 public class MarketTrends {
@@ -25,7 +24,12 @@ public class MarketTrends {
     public void setTrendDescription(String trendDescription) {
         this.trendDescription = trendDescription;
     }
-    
-   
-    
+
+    @Override
+    public String toString() {
+        return "MarketTrends{" +
+                "trendName='" + trendName + '\'' +
+                ", trendDescription='" + trendDescription + '\'' +
+                '}';
+    }
 }
