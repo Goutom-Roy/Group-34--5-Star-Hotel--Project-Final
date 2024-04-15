@@ -14,6 +14,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
@@ -25,12 +29,29 @@ import javafx.stage.Stage;
  */
 public class CEODashboardSceneController implements Initializable {
 
+    @FXML
+    private BarChart<String, Number> barChart;
+    @FXML
+    private NumberAxis yAxis;
+    @FXML
+    private CategoryAxis xAxis;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        XYChart.Series<String,Number> series = new XYChart.Series<String,Number>();
+        series.getData().add(new XYChart.Data<String,Number>("2024",60));
+        series.getData().add(new XYChart.Data<String,Number>("2023",50));
+        series.getData().add(new XYChart.Data<String,Number>("2022",35));
+        series.getData().add(new XYChart.Data<String,Number>("2021",24));
+        series.getData().add(new XYChart.Data<String,Number>("2020",23));
+        series.getData().add(new XYChart.Data<String,Number>("2019",20));
+        series.setName("Market Share");
+        barChart.getData().add(series);
+        
     }    
 
 

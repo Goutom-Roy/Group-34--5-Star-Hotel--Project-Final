@@ -161,6 +161,16 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
     String confirmPassword = confirmPassWordTextField.getText();
     
        // Check if new password and confirmed password match
+        if (!newPassWordTextField.getText().equals(confirmPassWordTextField.getText())) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText("New password and confirmed password do not match.");
+        alert.showAndWait();
+        
+        return;  
+            
+    }
 
        
        try {
@@ -175,16 +185,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
          FileWriter passInfoWriter = new FileWriter(passInfoFile, true);
         FileWriter writer = new FileWriter(tempFile);
         
-      if (!newPassWordTextField.getText().equals(confirmPassWordTextField.getText())) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText(null);
-        alert.setContentText("New password and confirmed password do not match.");
-        alert.showAndWait();
-        
-        return;  
-            
-    }
+
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
