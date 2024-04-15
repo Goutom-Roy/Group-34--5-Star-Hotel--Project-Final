@@ -105,7 +105,7 @@ public class ForgotPasswordAndUpdatepassSceneController implements Initializable
         String userDob = "";
         String user1 = "";
         try {
-             File file = new File("C:/Users/gouto/Netbeans files1/Group Projects/Group-34-(5-Star-Hotel)- Project-Final/Group-34--5-Star-Hotel--Project-Final/Group-34 ( 5 Star Hotel ) Project-Final/src/filesLoginUserDetails.txt");
+             File file = new File("LoginUserDetails.txt");
             Scanner scanner = new Scanner(file);
             scanner.useDelimiter("[;\n]");
             
