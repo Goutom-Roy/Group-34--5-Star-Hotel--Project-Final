@@ -76,7 +76,7 @@ public class SalesmanagerSpecialOfferController implements Initializable {
 
     @FXML
     private void OnclickdeleteButton(ActionEvent event) {
-       
+        // Clear the text area
         textarea.clear();
     }
 
