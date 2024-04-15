@@ -1,6 +1,4 @@
-
 package ModelClass;
-
 
 public class SalesPerformance {
     private String month;
@@ -26,5 +24,12 @@ public class SalesPerformance {
     public void setSalesAmount(int salesAmount) {
         this.salesAmount = salesAmount;
     }
-}
 
+    @Override
+    public String toString() {
+        return "SalesPerformance{" +
+                "month='" + month + '\'' +
+                ", salesAmount=" + salesAmount +
+                '}';
+    }
+}
