@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Revenue_Manager;
+package RevenueManager;
 
 import java.io.FileWriter;
 import java.io.IOException;

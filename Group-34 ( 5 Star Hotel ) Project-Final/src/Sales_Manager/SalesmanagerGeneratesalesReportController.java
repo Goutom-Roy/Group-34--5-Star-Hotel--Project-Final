@@ -1,6 +1,5 @@
 
-package Sales_Manager;
-
+package SalesManager;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

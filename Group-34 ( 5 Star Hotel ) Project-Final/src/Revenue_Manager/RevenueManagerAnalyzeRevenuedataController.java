@@ -1,6 +1,6 @@
 
 
-package Revenue_Manager;
+package RevenueManager;
 
 import java.io.FileWriter;
 import java.io.IOException;
