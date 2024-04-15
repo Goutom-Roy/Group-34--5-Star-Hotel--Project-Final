@@ -218,7 +218,7 @@ public class LoginSceneController implements Initializable {
             
 //            alert.show();
                     if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/RevenueManager/RevenueManagerDashboard.fxml"));
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/Revenue_Manager/RevenueManagerDashboard.fxml"));
                         Scene scene = new Scene(homepage);
                         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         addStage.setScene(scene);

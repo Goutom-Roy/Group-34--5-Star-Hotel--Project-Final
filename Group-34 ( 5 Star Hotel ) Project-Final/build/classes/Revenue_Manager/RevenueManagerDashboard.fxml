@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="638.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RevenueManager.RevenueManagerDashboardController">
+<AnchorPane id="AnchorPane" prefHeight="638.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Revenue_Manager.RevenueManagerDashboardController">
    <children>
       <AnchorPane layoutX="212.0" prefHeight="814.0" prefWidth="802.0" style="-fx-background-color: Skyblue;">
          <children>
@@ -71,7 +71,7 @@
                   <Font name="Cambria" size="19.0" />
                </font>
             </Label>
-            <Button layoutX="82.0" layoutY="706.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="78.0" text="Logout" />
+            <Button layoutX="82.0" layoutY="706.0" mnemonicParsing="false" onAction="#logouOnAction" prefHeight="35.0" prefWidth="78.0" text="Logout" />
             <Label layoutX="90.0" layoutY="294.0" text="Welcome" textFill="WHITE">
                <font>
                   <Font size="13.0" />
