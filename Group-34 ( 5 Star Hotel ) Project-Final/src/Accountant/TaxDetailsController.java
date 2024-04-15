@@ -49,6 +49,7 @@ public class TaxDetailsController implements Initializable {
     private TableColumn<Tax,String> TaxTypeTableColumn;
     @FXML
     private TableColumn<Tax,String> AmountTableColumn;
+    Alert UnselectTax=new Alert(Alert.AlertType.WARNING,"Please Select row from the table");
 
     /**
      * Initializes the controller class.
@@ -143,7 +144,24 @@ public class TaxDetailsController implements Initializable {
     }
 
     @FXML
-    private void viewSelectedTaxDetailsButtonOnclick(ActionEvent event) {
+    private void viewSelectedTaxDetailsButtonOnclick(ActionEvent event) throws IOException {
+        Tax Selectedtax=DueTaxTable.getSelectionModel().getSelectedItem();
+        if(Selectedtax==null){
+             UnselectTax.show();
+            return;
+        }
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewSelectedTaxDetails.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene ExpenseDetailsScene = new Scene(parent);
+        currentStage.setScene( ExpenseDetailsScene );
+        currentStage.show();
+      ViewSelectedTaxDetailsController controller=loader.getController();
+        controller.initData( DueTaxTable.getSelectionModel().getSelectedItem());
     }
     
 }

@@ -149,7 +149,7 @@ public class SalaryManagementController implements Initializable {
                  EmployeeNameTextField.setText("Mosammad Maherun Nesa");
                 EmailAddressTextField.setText("maherun093@gmail.com");
                DateOfBirthTextField.setText("2002-04-27");
-               DepartmentTextField.setText("Department of Food Preparation");
+               DepartmentTextField.setText("Food Preparation");
                JobTitleTextField.setText("Restaurant Manager");
                BasicSalaryTextField.setText("87000BDT");
                RegularHoursTextField.setText("160hr");
@@ -170,7 +170,7 @@ public class SalaryManagementController implements Initializable {
                 EmployeeNameTextField.setText("Mahmudur Hasan Bijoy");
                 EmailAddressTextField.setText("mahmudur022@gmail.com");
                DateOfBirthTextField.setText("2002-04-25");
-               DepartmentTextField.setText("Front Office Department");
+               DepartmentTextField.setText("Front Office");
                JobTitleTextField.setText("Hotel Receiptionist");
                BasicSalaryTextField.setText("50000");
                RegularHoursTextField.setText("160hr");
@@ -302,18 +302,17 @@ public class SalaryManagementController implements Initializable {
         
     }
 
-    @FXML
-    private void viewSalaryTransferRecordButtonOnclick(ActionEvent event) throws IOException {
-        Parent sceneParent = FXMLLoader.load(getClass().getResource("ViewTransferredSalaryRecords.fxml"));
-        Scene scene = new Scene(sceneParent);
-        Stage stg = (Stage)MenuBar.getScene().getWindow();
-        stg.setScene(scene);
-        stg.show();
-    }
+//    private void viewSalaryTransferRecordButtonOnclick(ActionEvent event) throws IOException {
+//        Parent sceneParent = FXMLLoader.load(getClass().getResource("ViewTransferredSalaryRecords.fxml"));
+//        Scene scene = new Scene(sceneParent);
+//        Stage stg = (Stage)MenuBar.getScene().getWindow();
+//        stg.setScene(scene);
+//        stg.show();
+//    }
 
     @FXML
     private void backButtonOnClick(ActionEvent event) throws IOException {
-         Parent back=FXMLLoader.load(getClass().getResource("ViewPendingDueDetails.fxml"));
+         Parent back=FXMLLoader.load(getClass().getResource("AccountantDashboard.fxml"));
         Scene newScene=new Scene(back);
         Stage stg1=(Stage)MenuBar.getScene().getWindow();
         stg1.setScene(newScene);

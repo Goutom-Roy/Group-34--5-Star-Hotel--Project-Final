@@ -8,12 +8,14 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="991.0" prefWidth="1154.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.AccountantResignationSceneController">
+<AnchorPane id="AnchorPane" prefHeight="1036.0" prefWidth="1154.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountant.AccountantResignationSceneController">
    <children>
       <MenuBar fx:id="MenuBar" prefHeight="40.0" prefWidth="1154.0">
         <menus>
@@ -34,56 +36,61 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Text fill="#fcf9f9" layoutX="357.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD Resignation" wrappingWidth="412.0">
+      <Text fill="#fcf9f9" layoutX="358.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD Resignation" wrappingWidth="412.0">
          <font>
             <Font name="System Bold" size="45.0" />
          </font>
       </Text>
-      <ComboBox fx:id="DepartmentComboBox" layoutX="526.0" layoutY="226.0" prefWidth="150.0" />
-      <TextField fx:id="ReasonForResignationTextField" layoutX="526.0" layoutY="348.0" prefHeight="40.0" prefWidth="246.0" />
-      <Line endX="319.0" layoutX="434.0" layoutY="141.0" startX="-100.0" stroke="#eee7e7" strokeWidth="3.0" />
-      <Label layoutX="288.0" layoutY="168.0" prefHeight="35.0" prefWidth="218.0" text="Resignation Date:" textFill="#fcf2f2">
+      <ComboBox fx:id="DepartmentComboBox" layoutX="526.0" layoutY="292.0" prefWidth="150.0" promptText="Select" />
+      <TextField fx:id="ReasonForResignationTextField" layoutX="526.0" layoutY="417.0" prefHeight="40.0" prefWidth="246.0" />
+      <Line endX="319.0" layoutX="436.0" layoutY="196.0" startX="-100.0" stroke="#eee7e7" strokeWidth="3.0" />
+      <Label layoutX="279.0" layoutY="232.0" prefHeight="35.0" prefWidth="218.0" text="Resignation Date:" textFill="#fcf2f2">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <DatePicker fx:id="ResignationDatePicker" layoutX="526.0" layoutY="170.0" />
-      <Label layoutX="307.0" layoutY="224.0" prefHeight="35.0" prefWidth="180.0" text="Department:" textFill="#fcf2f2">
+      <DatePicker fx:id="ResignationDatePicker" layoutX="526.0" layoutY="234.0" />
+      <Label layoutX="307.0" layoutY="290.0" prefHeight="35.0" prefWidth="180.0" text="Department:" textFill="#fcf2f2">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="221.0" layoutY="351.0" prefHeight="35.0" prefWidth="279.0" text="Reason For Resignation:" textFill="#fcf2f2">
+      <Label layoutX="218.0" layoutY="417.0" prefHeight="35.0" prefWidth="279.0" text="Reason For Resignation:" textFill="#fcf2f2">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <ComboBox fx:id="JobTitleComboBox" layoutX="526.0" layoutY="288.0" prefWidth="150.0" />
-      <Label layoutX="320.0" layoutY="284.0" prefHeight="35.0" prefWidth="180.0" text="Job Title:" textFill="#fcf2f2">
+      <ComboBox fx:id="JobTitleComboBox" layoutX="526.0" layoutY="354.0" prefWidth="150.0" promptText="Select" />
+      <Label layoutX="307.0" layoutY="352.0" prefHeight="35.0" prefWidth="180.0" text="Job Title:" textFill="#fcf2f2">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Text fill="#fcf9f9" layoutX="348.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type Your Resignation Letter Here." wrappingWidth="459.0">
+      <Text fill="#fcf9f9" layoutX="334.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type Your Resignation Letter Here." wrappingWidth="459.0">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="981.0" layoutY="665.0" mnemonicParsing="false" onAction="#submitResignationBuutonOnClick" text="SUBMIT" textFill="#656060">
+      <Button layoutX="985.0" layoutY="729.0" mnemonicParsing="false" onAction="#submitResignationBuutonOnClick" text="SUBMIT" textFill="#656060">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Button>
-      <Button layoutX="26.0" layoutY="923.0" mnemonicParsing="false" onAction="#returnToDashboardButtonOnClick" style="-fx-background-radius: 27;" text="Return To Dashboard" textFill="#656060">
+      <Button layoutX="26.0" layoutY="956.0" mnemonicParsing="false" onAction="#returnToDashboardButtonOnClick" style="-fx-background-radius: 27;" text="Return To Dashboard" textFill="#656060">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Button>
-      <Button layoutX="1002.0" layoutY="923.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-radius: 27;" text="Log Out" textFill="#656060">
+      <Button layoutX="1016.0" layoutY="966.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-radius: 27;" text="Log Out" textFill="#656060">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Button>
-      <TextField fx:id="ResignationLetterTextField" layoutX="224.0" layoutY="494.0" prefHeight="389.0" prefWidth="701.0" />
+      <TextField fx:id="ResignationLetterTextField" layoutX="227.0" layoutY="548.0" prefHeight="389.0" prefWidth="701.0" />
+      <ImageView fitHeight="78.0" fitWidth="88.0" layoutX="487.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/39613983.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

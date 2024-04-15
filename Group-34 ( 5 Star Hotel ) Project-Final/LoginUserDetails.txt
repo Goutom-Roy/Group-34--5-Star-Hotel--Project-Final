@@ -6,9 +6,3 @@ g@gmail.com;12345;CEO;Male;2024-04-02
 g@gmail.com;12345;IT Manager;Male;2024-04-02
 g@gmail.com;12345;CEO;Male;2024-04-09
 g@gmail.com;12345;IT Manager;Male;2024-04-09
-g@gmail.com;12345;CEO;Male;2024-04-10
-g@gmail.com;123456;IT Manager;Male;2024-04-10
-g@gmail.com;12345;Restaurant Manager;Male;2024-04-10
-g@gmail.com;12345;Accountant;Male;2024-04-10
-g@gmail.com;12345;Revenue Manager;Male;2024-04-10
-g@gmail.com;12345;Sales Manager;Male;2024-04-10

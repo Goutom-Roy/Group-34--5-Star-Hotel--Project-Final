@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="937.0" prefWidth="1154.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManager.RestaurantManagerResignationSceneController">
+<AnchorPane id="AnchorPane" prefHeight="995.0" prefWidth="1154.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManager.RestaurantManagerResignationSceneController">
    <children>
       <MenuBar fx:id="MenuBar" prefHeight="40.0" prefWidth="1154.0">
         <menus>
@@ -64,26 +64,26 @@
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Text fill="#fcf9f9" layoutX="348.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type Your Resignation Letter Here." wrappingWidth="459.0">
+      <Text fill="#fcf9f9" layoutX="341.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type Your Resignation Letter Here." wrappingWidth="459.0">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="981.0" layoutY="665.0" mnemonicParsing="false" onAction="#submitResignationBuutonOnClick" text="SUBMIT" textFill="#656060">
+      <Button layoutX="991.0" layoutY="726.0" mnemonicParsing="false" onAction="#submitResignationBuutonOnClick" text="SUBMIT" textFill="#656060">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="885.0" mnemonicParsing="false" onAction="#returnToDashboardButtonOnClick" style="-fx-background-radius: 27;" text="Return To Dashboard" textFill="#656060">
+      <Button layoutX="14.0" layoutY="930.0" mnemonicParsing="false" onAction="#returnToDashboardButtonOnClick" style="-fx-background-radius: 27;" text="Return To Dashboard" textFill="#656060">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="1035.0" layoutY="904.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-radius: 27;" text="Log Out" textFill="#656060">
+      <Button layoutX="1045.0" layoutY="930.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-radius: 27;" text="Log Out" textFill="#656060">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="ResignationLetterTextField" layoutX="227.0" layoutY="478.0" prefHeight="389.0" prefWidth="701.0" />
+      <TextField fx:id="ResignationLetterTextField" layoutX="227.0" layoutY="541.0" prefHeight="389.0" prefWidth="701.0" />
    </children>
 </AnchorPane>
