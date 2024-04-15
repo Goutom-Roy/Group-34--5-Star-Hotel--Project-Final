@@ -8,21 +8,60 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="852.0" prefWidth="1053.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManager.RestaurantManagerDeshBoardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1181.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManager.RestaurantManagerDeshBoardController">
    <children>
-      <AnchorPane layoutX="318.0" prefHeight="139.0" prefWidth="738.0" style="-fx-background-color: #6E916F;">
+      <AnchorPane layoutX="350.0" prefHeight="171.0" prefWidth="832.0" style="-fx-background-color: #737373;">
          <children>
-            <Line endX="-100.0" endY="80.99998474121094" layoutX="134.0" layoutY="54.0" startX="-99.0" startY="-54.999977111816406" stroke="#f2eeee" strokeWidth="4.0" />
-            <Text fill="#fffbfb" layoutX="124.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant Manager Dashboard" wrappingWidth="601.453125">
+            <Text fill="#fffbfb" layoutX="187.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant Manager Dashboard" wrappingWidth="601.453125">
                <font>
                   <Font name="System Bold Italic" size="37.0" />
                </font>
             </Text>
+            <ImageView fitHeight="123.0" fitWidth="150.0" layoutX="56.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Restaurant%20Manager.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="93.0" fitWidth="123.0" layoutX="362.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/39613983.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="-1.0" prefHeight="852.0" prefWidth="348.0" style="-fx-background-color: #6E916F;">
+      <Button layoutX="551.0" layoutY="205.0" mnemonicParsing="false" onAction="#menuManagementButtonOnClick" prefHeight="75.0" prefWidth="448.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Menu Management" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Button>
+      <Button layoutX="550.0" layoutY="312.0" mnemonicParsing="false" onAction="#orderManagementButtonOnClick" prefHeight="75.0" prefWidth="448.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Order Management" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Button>
+      <Button layoutX="547.0" layoutY="421.0" mnemonicParsing="false" onAction="#analysisButtonOnClick" prefHeight="75.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Analysis" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Button>
+      <Button layoutX="547.0" layoutY="532.0" mnemonicParsing="false" onAction="#customerCareButtonOnClick" prefHeight="75.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Customer Care" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Button>
+      <Button layoutX="547.0" layoutY="753.0" mnemonicParsing="false" onAction="#resTaurantManagerResignationButtonOnClick" prefHeight="75.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Resignation" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Button>
+      <Button layoutX="547.0" layoutY="643.0" mnemonicParsing="false" onAction="#restaurantManagerFeedbackButtonOnClick" prefHeight="75.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Feedback" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="-1.0" prefHeight="893.0" prefWidth="350.0" style="-fx-background-color: #737373;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="92.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="98.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Image/profile-picture-placeholder-icon-design-in-white-vector-37114567.jpg" />
                </image>
@@ -43,47 +82,13 @@
                   <Image url="@../Image/Untitled%20design.png" />
                </image>
             </ImageView>
-            <Button layoutX="112.0" layoutY="768.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" prefHeight="49.0" prefWidth="110.0" style="-fx-background-color: White; -fx-background-radius: 27;" text="Log Out" textFill="#323030">
+            <Button layoutX="106.0" layoutY="821.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" prefHeight="42.0" prefWidth="104.0" style="-fx-background-color: White; -fx-background-radius: 27;" text="Log Out" textFill="#222020">
                <font>
                   <Font name="System Bold Italic" size="17.0" />
                </font>
             </Button>
+            <Line endX="-97.0" endY="98.00003051757812" layoutX="450.0" layoutY="73.0" startX="-97.0" startY="-72.9999771118164" stroke="#f2eeee" strokeWidth="4.0" />
          </children>
       </AnchorPane>
-      <Button layoutX="518.0" layoutY="153.0" mnemonicParsing="false" onAction="#menuManagementButtonOnClick" prefHeight="75.0" prefWidth="448.0" style="-fx-background-color: #6E916F; -fx-background-radius: 27;" text="Menu Management" textFill="#f8f5f5">
-         <font>
-            <Font name="System Bold Italic" size="29.0" />
-         </font>
-      </Button>
-      <Button layoutX="518.0" layoutY="251.0" mnemonicParsing="false" onAction="#orderManagementButtonOnClick" prefHeight="63.0" prefWidth="448.0" style="-fx-background-color: #6E916F; -fx-background-radius: 27;" text="Order Management" textFill="#f8f5f5">
-         <font>
-            <Font name="System Bold Italic" size="29.0" />
-         </font>
-      </Button>
-      <Button layoutX="518.0" layoutY="605.0" mnemonicParsing="false" onAction="#orderAnalysisButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Order Analysis" textFill="#f8f5f5">
-         <font>
-            <Font name="System Bold Italic" size="29.0" />
-         </font>
-      </Button>
-      <Button layoutX="518.0" layoutY="425.0" mnemonicParsing="false" onAction="#respondToReviewsButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Respond to Reviews" textFill="#f8f5f5">
-         <font>
-            <Font name="System Bold Italic" size="29.0" />
-         </font>
-      </Button>
-      <Button layoutX="518.0" layoutY="335.0" mnemonicParsing="false" onAction="#discountButtonOnClick" prefHeight="63.0" prefWidth="448.0" style="-fx-background-color: #6E916F; -fx-background-radius: 27;" text="Discount" textFill="#f8f5f5">
-         <font>
-            <Font name="System Bold Italic" size="29.0" />
-         </font>
-      </Button>
-      <Button layoutX="518.0" layoutY="517.0" mnemonicParsing="false" onAction="#customerCareButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Customer Care" textFill="#f8f5f5">
-         <font>
-            <Font name="System Bold Italic" size="29.0" />
-         </font>
-      </Button>
-      <Button layoutX="518.0" layoutY="703.0" mnemonicParsing="false" onAction="#resignationButtonOnClick" prefHeight="63.0" prefWidth="455.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Resignation" textFill="#f8f5f5">
-         <font>
-            <Font name="System Bold Italic" size="29.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

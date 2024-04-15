@@ -59,6 +59,7 @@ public class ViewPastDueRecordsController implements Initializable {
     private TableColumn<Due,String> PayMethodtableColumn;
     @FXML
     private MenuBar MenuBar;
+     Alert UnselectDue=new Alert(Alert.AlertType.WARNING,"Please Select row from the table");
 
     /**
      * Initializes the controller class.
@@ -179,6 +180,11 @@ public class ViewPastDueRecordsController implements Initializable {
 
     @FXML
     private void viewSelectedDueDetailsButtonOnclick(ActionEvent event) throws IOException {
+         Due SelectedDue=ViewPastDueTableRecord.getSelectionModel().getSelectedItem();
+        if(SelectedDue==null){
+            UnselectDue.show();
+            return;
+        }
            FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewSelectedPastDueRecords.fxml"));
         Parent parent = loader.load();
 

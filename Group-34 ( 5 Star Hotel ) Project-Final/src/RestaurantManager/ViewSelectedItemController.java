@@ -50,8 +50,7 @@ public class ViewSelectedItemController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        
+        // TODO
     }    
 
     @FXML
@@ -88,7 +87,7 @@ public class ViewSelectedItemController implements Initializable {
 
     @FXML
     private void LogOutButtonOnClick(ActionEvent event) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout Confirmation");
         alert.setHeaderText("Logout Successfully");
         alert.setContentText("Do you want to Logout ? If not then click Cancel");
