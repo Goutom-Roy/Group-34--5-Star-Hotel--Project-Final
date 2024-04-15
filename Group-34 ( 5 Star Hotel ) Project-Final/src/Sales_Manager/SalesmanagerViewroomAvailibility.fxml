@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SalesManager.SalesmanagerViewroomAvailibilityController">
+   <children>
+      <AnchorPane layoutY="3.0" prefHeight="608.0" prefWidth="942.0">
+         <children>
+            <Text layoutX="47.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Type " wrappingWidth="126.93669891357422" />
+            <Button fx:id="viewbuttonfxid" layoutX="500.0" layoutY="152.0" mnemonicParsing="false" onAction="#Onclickviewbutton" prefHeight="36.0" prefWidth="204.0" text=" View Availability " />
+            <Label fx:id="output" alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="317.0" prefHeight="131.0" prefWidth="709.0" style="-fx-background-color: whitesmoke;" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font></Label>
+            <Text layoutX="23.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Price per night" wrappingWidth="248.97775268554688" />
+            <Text layoutX="47.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Room" wrappingWidth="100.45972442626953" />
+            <TextField fx:id="PricepernightField" layoutX="176.0" layoutY="166.0" />
+            <TextField fx:id="TotalroomField" layoutX="176.0" layoutY="227.0" />
+            <Button fx:id="Nextbuttonfxid" layoutX="387.0" layoutY="482.0" mnemonicParsing="false" onAction="#OnclicknextButton" prefHeight="36.0" prefWidth="150.0" text="Next" />
+            <Text layoutX="251.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to View Room Availibility" wrappingWidth="423.7366027832031">
+               <font>
+                  <Font name="Bookman Old Style" size="23.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="ComboBox" layoutX="175.0" layoutY="100.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
