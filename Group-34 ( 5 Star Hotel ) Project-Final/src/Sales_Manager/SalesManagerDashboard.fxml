@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sales_Manager.SalesManagerDashboardController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sales_Manager.SalesManagerDashboardController">
    <children>
       <AnchorPane layoutX="242.0" layoutY="-3.0" prefHeight="822.0" prefWidth="784.0" style="-fx-background-color: skyBlue;">
          <children>
@@ -71,7 +71,7 @@
                   <Font name="Cambria" size="19.0" />
                </font>
             </Label>
-            <Button layoutX="76.0" layoutY="709.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="78.0" text="Logout" />
+            <Button layoutX="76.0" layoutY="709.0" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="38.0" prefWidth="78.0" text="Logout" />
             <Label layoutX="88.0" layoutY="311.0" text="Welcome" textFill="WHITE">
                <font>
                   <Font size="13.0" />
