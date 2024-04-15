@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -56,26 +61,29 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="29.0" layoutY="180.0" prefHeight="145.0" prefWidth="619.0" style="-fx-background-color: #748CF1; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-style: solid;" />
-            <Label layoutX="29.0" layoutY="146.0" prefHeight="34.0" prefWidth="177.0" text="Metting">
-               <font>
-                  <Font name="Times New Roman" size="16.0" />
-               </font>
-            </Label>
-            <Label layoutX="29.0" layoutY="377.0" prefHeight="145.0" prefWidth="619.0" style="-fx-background-color: #60bf73; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-style: solid;" />
-            <Label layoutX="29.0" layoutY="344.0" text="feedback" />
-            <Label layoutX="29.0" layoutY="576.0" prefHeight="145.0" prefWidth="619.0" style="-fx-background-color: #FD9999; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-style: solid;" />
-            <Label layoutX="35.0" layoutY="555.0" text="Buggets" />
-            <Label layoutX="179.0" layoutY="67.0" text="Welcome Dashboard" textFill="#157d31">
+            <Label layoutX="179.0" layoutY="30.0" text="Welcome Dashboard" textFill="#157d31">
                <font>
                   <Font name="Times New Roman Bold" size="40.0" />
                </font>
             </Label>
-            <Button layoutX="416.0" layoutY="732.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Logout" textFill="WHITE">
+            <Button layoutX="407.0" layoutY="710.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: #141313; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-style: solid; -fx-border-color: #141313;" text="Logout" textFill="WHITE">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
+            <BarChart fx:id="barChart" layoutX="21.0" layoutY="296.0" prefHeight="403.0" prefWidth="633.0" title="Market Share">
+               <xAxis>
+                  <CategoryAxis label="Year" side="BOTTOM" fx:id="xAxis" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="yAxis" label="Tk in Bilion" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <ImageView fitHeight="196.0" fitWidth="272.0" layoutX="222.0" layoutY="92.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Image/ceo-icon.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </center>
