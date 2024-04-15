@@ -7,86 +7,105 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="1298.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManager.MenuManagementController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="1376.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManager.MenuManagementController">
    <children>
-      <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="908.0" prefWidth="389.0" style="-fx-background-color: White;">
+      <AnchorPane prefHeight="908.0" prefWidth="432.0" style="-fx-background-color: #6E916F;">
          <children>
-            <TextField fx:id="IdtextField" layoutX="189.0" layoutY="36.0" />
-            <TextField fx:id="ItemDescriptionTextField" layoutX="189.0" layoutY="202.0" />
-            <TextField fx:id="QuantityTextField" layoutX="189.0" layoutY="266.0" />
-            <TextField fx:id="priceTextField" layoutX="189.0" layoutY="325.0" />
-            <ComboBox fx:id="ItemTypeComboBox" layoutX="189.0" layoutY="140.0" prefWidth="150.0" />
-            <ComboBox fx:id="StatusComboBox" layoutX="189.0" layoutY="393.0" prefWidth="150.0" />
-            <TextField fx:id="ItemNameTextField" layoutX="189.0" layoutY="83.0" />
-            <Label layoutX="102.0" layoutY="38.0" text="ID:">
+            <TextField fx:id="IdtextField" layoutX="239.0" layoutY="267.0" />
+            <TextField fx:id="ItemDescriptionTextField" layoutX="239.0" layoutY="463.0" />
+            <TextField fx:id="QuantityTextField" layoutX="239.0" layoutY="517.0" />
+            <TextField fx:id="priceTextField" layoutX="239.0" layoutY="575.0" />
+            <ComboBox fx:id="ItemTypeComboBox" layoutX="239.0" layoutY="403.0" prefWidth="150.0" />
+            <ComboBox fx:id="StatusComboBox" layoutX="239.0" layoutY="627.0" prefWidth="150.0" />
+            <TextField fx:id="ItemNameTextField" layoutX="239.0" layoutY="335.0" />
+            <Label layoutX="119.0" layoutY="265.0" text="ID:" textFill="#fffafa">
                <font>
-                  <Font size="19.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="62.0" layoutY="141.0" text="Item Type:">
+            <Label layoutX="68.0" layoutY="401.0" text="Item Type:" textFill="#ebe9e9">
                <font>
-                  <Font size="19.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="34.0" layoutY="204.0" text="Item Description:">
+            <Label layoutX="29.0" layoutY="461.0" text="Item Description:" textFill="#eeebeb">
                <font>
-                  <Font size="19.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="75.0" layoutY="266.0" text="Quantity:">
+            <Label layoutX="81.0" layoutY="515.0" text="Quantity:" textFill="#fcfafa">
                <font>
-                  <Font size="19.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="92.0" layoutY="327.0" text="Price(BDT):">
+            <Label layoutX="77.0" layoutY="573.0" text="Price(BDT):" textFill="#ebe8e8">
                <font>
-                  <Font size="19.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="87.0" layoutY="395.0" text="Status:">
+            <Label layoutX="91.0" layoutY="625.0" text="Status:" textFill="#fffefe">
                <font>
-                  <Font size="19.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="65.0" layoutY="85.0" text="Item Name:">
+            <Label layoutX="74.0" layoutY="333.0" text="Item Name:" textFill="#f8f1f1">
                <font>
-                  <Font size="19.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Button layoutX="21.0" layoutY="519.0" mnemonicParsing="false" onAction="#addNewItemButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Add New item" textFill="#fcf6f6">
+            <Button layoutX="18.0" layoutY="704.0" mnemonicParsing="false" onAction="#addNewItemButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Add New item" textFill="#fcf6f6">
                <font>
                   <Font name="System Bold Italic" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="237.0" layoutY="519.0" mnemonicParsing="false" onAction="#deleteButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Delete" textFill="#fcf6f6">
+            <Button layoutX="256.0" layoutY="704.0" mnemonicParsing="false" onAction="#deleteButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Delete" textFill="#fcf6f6">
                <font>
                   <Font name="System Bold Italic" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="88.0" layoutY="605.0" mnemonicParsing="false" onAction="#viewSelectedItemButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="View Seleted Items" textFill="#fcf6f6">
+            <Button layoutX="89.0" layoutY="780.0" mnemonicParsing="false" onAction="#viewSelectedItemButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="View Seleted Items" textFill="#fcf6f6">
                <font>
                   <Font name="System Bold Italic" size="21.0" />
                </font>
             </Button>
+            <AnchorPane layoutX="-7.0" layoutY="-3.0" prefHeight="187.0" prefWidth="441.0" style="-fx-background-color: #737373;">
+               <children>
+                  <Text fill="#fffdfd" layoutX="77.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Menu Item" wrappingWidth="286.99998158216476">
+                     <font>
+                        <Font name="System Bold Italic" size="37.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="104.0" fitWidth="126.0" layoutX="150.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Untitled%20design.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="387.0" layoutY="-2.0" prefHeight="145.0" prefWidth="893.0" style="-fx-background-color: #737373;">
+      <AnchorPane layoutX="431.0" prefHeight="179.0" prefWidth="948.0" style="-fx-background-color: #737373;">
          <children>
-            <Text fill="#fffdfd" layoutX="273.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Management">
+            <Text fill="#fffdfd" layoutX="284.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Management">
                <font>
-                  <Font name="System Bold Italic" size="34.0" />
+                  <Font name="System Bold Italic" size="47.0" />
                </font>
             </Text>
-            <Line endX="-115.0" endY="48.500030517578125" layoutX="115.0" layoutY="84.0" startX="-115.0" startY="-83.9999771118164" />
-            <Separator layoutX="7.0" orientation="VERTICAL" prefHeight="177.0" prefWidth="1.0" />
+            <ImageView fitHeight="150.0" fitWidth="199.0" layoutX="134.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/4813064.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="187.0" prefWidth="6.0" />
          </children>
       </AnchorPane>
-      <TableView fx:id="ItemDetailsTableView" layoutX="395.0" layoutY="277.0" prefHeight="488.0" prefWidth="900.0">
+      <TableView fx:id="ItemDetailsTableView" layoutX="462.0" layoutY="283.0" prefHeight="488.0" prefWidth="900.0">
         <columns>
           <TableColumn fx:id="IdTableColumn" onEditCommit="#IdTableColumnOnEdit" prefWidth="46.0" text="Id" />
           <TableColumn fx:id="ItemNameTableColumn" onEditCommit="#ItemNameTableColumnOnEdit" prefWidth="130.0" text="Item Name" />
@@ -97,15 +116,16 @@
             <TableColumn fx:id="StatusTableColumn" onEditCommit="#StatusTableCOlumnOnEdit" prefWidth="86.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="422.0" layoutY="822.0" mnemonicParsing="false" onAction="#returnToDeshboardButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Return To dashboard" textFill="#fcf6f6">
+      <Button layoutX="446.0" layoutY="845.0" mnemonicParsing="false" onAction="#returnToDeshboardButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Return To dashboard" textFill="#fcf6f6">
          <font>
             <Font name="System Bold Italic" size="21.0" />
          </font>
       </Button>
-      <Button layoutX="1102.0" layoutY="822.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Log Out" textFill="#fcf6f6">
+      <Button layoutX="1247.0" layoutY="845.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Log Out" textFill="#fcf6f6">
          <font>
             <Font name="System Bold Italic" size="21.0" />
          </font>
       </Button>
+      <Separator layoutX="431.0" layoutY="187.0" orientation="VERTICAL" prefHeight="722.0" prefWidth="6.0" />
    </children>
 </AnchorPane>

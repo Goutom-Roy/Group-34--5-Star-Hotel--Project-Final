@@ -60,36 +60,30 @@
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="551.0" layoutY="335.0" mnemonicParsing="false" onAction="#manageFinancialRecordButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Manage Financial Record" textFill="#f8f5f5">
+      <Button layoutX="552.0" layoutY="339.0" mnemonicParsing="false" onAction="#expenditureButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Expenditure" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="551.0" layoutY="419.0" mnemonicParsing="false" onAction="#expenditureButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Expenditure" textFill="#f8f5f5">
+      <Button layoutX="553.0" layoutY="419.0" mnemonicParsing="false" onAction="#profitLossChartButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Profit And Loss Chart" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="551.0" layoutY="502.0" mnemonicParsing="false" onAction="#profitLossChartButtonOnClick" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Profit/Loss Chart" textFill="#f8f5f5">
+      <Button layoutX="554.0" layoutY="510.0" mnemonicParsing="false" onAction="#resignationButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Resignation" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="550.0" layoutY="582.0" mnemonicParsing="false" onAction="#resignationButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Resignation" textFill="#f8f5f5">
+      <Button layoutX="562.0" layoutY="595.0" mnemonicParsing="false" onAction="#feedBackButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Feedback" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Button layoutX="551.0" layoutY="670.0" mnemonicParsing="false" onAction="#feedBackButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Feedback" textFill="#f8f5f5">
-         <font>
-            <Font name="System Bold Italic" size="27.0" />
-         </font>
-      </Button>
-      <Button layoutX="552.0" layoutY="756.0" mnemonicParsing="false" onAction="#taxButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Tax" textFill="#f8f5f5">
+      <Button layoutX="562.0" layoutY="685.0" mnemonicParsing="false" onAction="#taxButtonOnClick" prefHeight="57.0" prefWidth="364.0" style="-fx-background-color: #737373; -fx-background-radius: 27;" text="Tax" textFill="#f8f5f5">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
    </children>
 </AnchorPane>
-

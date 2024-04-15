@@ -22,6 +22,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -47,6 +48,8 @@ public class OrderAnalysisPieChartController implements Initializable {
     private Button loadPieChartButton1;
      private ObservableList <PieChart.Data> list 
             = FXCollections.observableArrayList();
+    @FXML
+    private MenuBar MenuBar;
 
     /**
      * Initializes the controller class.
@@ -59,7 +62,7 @@ public class OrderAnalysisPieChartController implements Initializable {
 
     @FXML
     private void labelMouseEnterOnClick(MouseEvent event) {
-        statusLabel.setText("You are hoovering on the label");
+        statusLabel.setText("Most Ordered Item from December 2023-March 2024");
     }
 
     @FXML
@@ -115,14 +118,24 @@ public class OrderAnalysisPieChartController implements Initializable {
     }
 
     @FXML
-    private void returnToDashBoardButtonOnClick(ActionEvent event) {
+    private void returnToDashBoardButtonOnClick(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("RestaurantManagerDeshBoard.fxml"));
+        Parent parent = loader.load();
+
         
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene UserViewScene = new Scene(parent);
+
+        currentStage.setScene(UserViewScene);
+        currentStage.show(); 
         
     }
 
     @FXML
     private void logOutButtonOnClick(ActionEvent event) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout Confirmation");
         alert.setHeaderText("Logout Successfully");
         alert.setContentText("Do you want to Logout ? If not then click Cancel");
@@ -134,6 +147,15 @@ public class OrderAnalysisPieChartController implements Initializable {
         stg1.setScene(newScene);
         stg1.show();
     }
+    }
+
+    @FXML
+    private void backButtonOnClick(ActionEvent event) throws IOException {
+        Parent back=FXMLLoader.load(getClass().getResource("OverallAnalysis.fxml"));
+        Scene newScene=new Scene(back);
+        Stage stg1=(Stage)MenuBar.getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
     
 }

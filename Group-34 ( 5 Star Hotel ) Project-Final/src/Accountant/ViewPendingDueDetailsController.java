@@ -23,6 +23,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -54,6 +55,7 @@ public class ViewPendingDueDetailsController implements Initializable {
     private MenuBar MenuBar;
     @FXML
     private TableColumn<Due, String> PayMethodtableColumn;
+    Alert UnselectDue=new Alert(Alert.AlertType.WARNING,"Please Select row from the table");
 
     /**
      * Initializes the controller class.
@@ -136,6 +138,11 @@ public class ViewPendingDueDetailsController implements Initializable {
 
     @FXML
     private void viewSelectedDueDetailsButtonOnclick(ActionEvent event) throws IOException {
+        Due SelectedDue=ViewPendingDueTableView.getSelectionModel().getSelectedItem();
+        if(SelectedDue==null){
+            UnselectDue.show();
+            return;
+        }
           FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewSelectedDueDetails.fxml"));
         Parent parent = loader.load();
 
