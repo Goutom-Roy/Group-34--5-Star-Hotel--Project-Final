@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="821.0" prefWidth="1037.0" style="-fx-background-color: #6E916F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManager.SolveCustomerIssueController">
+   <children>
+      <MenuBar fx:id="MenuBar" layoutY="-1.0" prefHeight="39.0" prefWidth="1037.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text fill="#ebe7e7" layoutX="196.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reply To Customer's issue with solution">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="CustomerIdComboBox" layoutX="420.0" layoutY="198.0" onAction="#customerIdComboBoxOnClick" prefWidth="150.0" />
+      <Line endX="623.0" layoutX="279.0" layoutY="137.0" startX="-100.0" stroke="#fff9f9" strokeWidth="3.0" />
+      <TextField fx:id="EmailAddressTextField" layoutX="420.0" layoutY="256.0" />
+      <TextField fx:id="IssueTypeTextField" layoutX="420.0" layoutY="316.0" />
+      <TextField fx:id="ReplyCustomersIssueTextField" layoutX="226.0" layoutY="418.0" prefHeight="286.0" prefWidth="586.0" />
+      <Text fill="#ebe7e7" layoutX="231.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reply To Customer's issue with solution here." wrappingWidth="619.44384765625">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <Label layoutX="281.0" layoutY="198.0" text="Customer Id:" textFill="#f8f3f3">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="264.0" layoutY="256.0" text="Email address:" textFill="#f8f3f3">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="281.0" layoutY="316.0" text="Issue Type:" textFill="#f8f3f3">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="41.0" layoutY="750.0" mnemonicParsing="false" onAction="#returnToDashboardButtonOnClick" prefHeight="46.0" prefWidth="205.0" style="-fx-background-radius: 27;" text="Return To dashboard" textFill="#141313">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="921.0" layoutY="758.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" style="-fx-background-radius: 27;" text="Log Out" textFill="#141313">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="858.0" layoutY="502.0" mnemonicParsing="false" onAction="#submitReplyButtonOnClick" prefHeight="46.0" prefWidth="150.0" style="-fx-background-radius: 27;" text="SUBMIT" textFill="#141313">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,5 +1,5 @@
 
-package RevenueManager;
+package Revenue_Manager;
 
 import java.io.IOException;
 import java.net.URL;
@@ -8,9 +8,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 
@@ -282,6 +285,22 @@ public class RevenueManagerDashboardController implements Initializable {
         
     }
 
+    @FXML
+    private void logouOnAction(ActionEvent event) throws IOException {
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout Confirmation");
+        alert.setHeaderText("Logout Successfully");
+        alert.setContentText("Do you want to Logout ? If not then click Cancel");
+        
+        if(alert.showAndWait().get()==ButtonType.OK){
+        Parent singup=FXMLLoader.load(getClass().getResource("/mainpkg/LoginScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+    }
+
    
     
+}
 }

@@ -55,7 +55,8 @@ public class LoginSceneController implements Initializable {
       passwordShowTextField.setVisible(false);
       showEye.setVisible(false);
       
-
+ // Add a listener to synchronize passwordShowTextField with passwordTextField
+    passwordShowTextField.textProperty().bindBidirectional(passwordTextField.textProperty());
          
       
     }   
@@ -138,7 +139,8 @@ public class LoginSceneController implements Initializable {
                         addStage.setScene(scene);
                         addStage.show(); 
                     }
-
+ // Set found to true when user is found     
+            found = true; 
                     return;
                     
                 }
@@ -158,14 +160,15 @@ public class LoginSceneController implements Initializable {
             
 //            alert.show();
                     if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/it_manager/IT_ManagerDashBoardScene.fxml"));
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/it_manager/IT_ManagerDashboardScene.fxml"));
                         Scene scene = new Scene(homepage);
                         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         addStage.setScene(scene);
                         addStage.show();
                         
                     }
-
+ // Set found to true when user is found     
+            found = true; 
                     return ;
                     
                 }
@@ -186,14 +189,15 @@ public class LoginSceneController implements Initializable {
             
 //            alert.show();
                     if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/SalesManager/SalesManagerDashboard.fxml"));
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/Sales_Manager/SalesManagerDashboard.fxml"));
                         Scene scene = new Scene(homepage);
                         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         addStage.setScene(scene);
                         addStage.show();
                         
                     }
-
+ // Set found to true when user is found     
+            found = true; 
                     return ;
                     
                 }
@@ -214,24 +218,196 @@ public class LoginSceneController implements Initializable {
             
 //            alert.show();
                     if(alert.showAndWait().get()==ButtonType.OK){
-                        Parent homepage = FXMLLoader.load(getClass().getResource("/RevenueManager/RevenueManagerDashboard.fxml"));
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/Revenue_Manager/RevenueManagerDashboard.fxml"));
                         Scene scene = new Scene(homepage);
                         Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         addStage.setScene(scene);
                         addStage.show();
                         
                     }
-
+ // Set found to true when user is found     
+            found = true; 
                     return ;
                     
                 }
                
                }
 //----------------------------------------------------------------------------------------------
-
+//Restaurant Manager
+                    else if(userComboBox.getValue().equals("Restaurant Manager")){
+                   if(emailTextField.getText().equals(userEmail) 
+                        && passwordTextField.getText().equals(userPassword)
+                        && userComboBox.getValue().equals(userRole)){
+                    
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Login Confirmation");
+                    alert.setHeaderText("Login Successfully");
+                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
+            
+//            alert.show();
+                    if(alert.showAndWait().get()==ButtonType.OK){
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/RestaurantManager/RestaurantManagerDeshBoard.fxml"));
+                        Scene scene = new Scene(homepage);
+                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        addStage.setScene(scene);
+                        addStage.show();
+                        
+                    }
+ // Set found to true when user is found     
+            found = true; 
+                    return ;
+                    
+                }
+               
+               }
+               
+//--------------------------------------------------------------------------------------------------------------      
+  //Accountant                  
+                          else if(userComboBox.getValue().equals("Accountant")){
+                   if(emailTextField.getText().equals(userEmail) 
+                        && passwordTextField.getText().equals(userPassword)
+                        && userComboBox.getValue().equals(userRole)){
+                    
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Login Confirmation");
+                    alert.setHeaderText("Login Successfully");
+                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
+            
+//            alert.show();
+                    if(alert.showAndWait().get()==ButtonType.OK){
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/Accountant/AccountantDashboard.fxml"));
+                        Scene scene = new Scene(homepage);
+                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        addStage.setScene(scene);
+                        addStage.show();
+                        
+                    }
+ // Set found to true when user is found     
+            found = true; 
+                    return ;
+                    
+                }
+               
+               }    
+               
+//-------------------------------------------------------------------------------------------------
+//Hotel Receptionist
+                          else if(userComboBox.getValue().equals("Hotel Receptionist")){
+                   if(emailTextField.getText().equals(userEmail) 
+                        && passwordTextField.getText().equals(userPassword)
+                        && userComboBox.getValue().equals(userRole)){
+                    
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Login Confirmation");
+                    alert.setHeaderText("Login Successfully");
+                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
+            
+//            alert.show();
+                    if(alert.showAndWait().get()==ButtonType.OK){
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/package/fxml"));
+                        Scene scene = new Scene(homepage);
+                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        addStage.setScene(scene);
+                        addStage.show();
+                        
+                    }
+ // Set found to true when user is found     
+            found = true; 
+                    return ;
+                    
+                }
+               
+               } 
+ //--------------------------------------------------------------------------------------
+ //Security Manager
+                           else if(userComboBox.getValue().equals("Security Manager")){
+                   if(emailTextField.getText().equals(userEmail) 
+                        && passwordTextField.getText().equals(userPassword)
+                        && userComboBox.getValue().equals(userRole)){
+                    
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Login Confirmation");
+                    alert.setHeaderText("Login Successfully");
+                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
+            
+//            alert.show();
+                    if(alert.showAndWait().get()==ButtonType.OK){
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/package/fxml"));
+                        Scene scene = new Scene(homepage);
+                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        addStage.setScene(scene);
+                        addStage.show();
+                        
+                    }
+ // Set found to true when user is found     
+            found = true; 
+                    return ;
+                    
+                }
+               
+               } 
+               
+//-------------------------------------------------------------------------------
+//Customer
+                   else if(userComboBox.getValue().equals("Customer")){
+                   if(emailTextField.getText().equals(userEmail) 
+                        && passwordTextField.getText().equals(userPassword)
+                        && userComboBox.getValue().equals(userRole)){
+                    
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Login Confirmation");
+                    alert.setHeaderText("Login Successfully");
+                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
+            
+//            alert.show();
+                    if(alert.showAndWait().get()==ButtonType.OK){
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/package/fxml"));
+                        Scene scene = new Scene(homepage);
+                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        addStage.setScene(scene);
+                        addStage.show();
+                        
+                    }
+ // Set found to true when user is found     
+            found = true; 
+                    return ;
+                    
+                }
+               
+               } 
+ //--------------------------------------------------------------------------------------------
+ //Staff
+                    else if(userComboBox.getValue().equals("Customer")){
+                   if(emailTextField.getText().equals(userEmail) 
+                        && passwordTextField.getText().equals(userPassword)
+                        && userComboBox.getValue().equals(userRole)){
+                    
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Login Confirmation");
+                    alert.setHeaderText("Login Successfully");
+                    alert.setContentText("Do you want to LogIn ? If not then click Cancel");
+            
+//            alert.show();
+                    if(alert.showAndWait().get()==ButtonType.OK){
+                        Parent homepage = FXMLLoader.load(getClass().getResource("/package/fxml"));
+                        Scene scene = new Scene(homepage);
+                        Stage addStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        addStage.setScene(scene);
+                        addStage.show();
+                        
+                    }
+ // Set found to true when user is found     
+            found = true; 
+                    return ;
+                    
+                }
+               
+               } 
 
 
                     }
+                
+//---------------------------------------------------------------
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("No User Found");
             alert.setContentText("SIGN UP FIRST or (GIVEN THE ACCURATE INFORMATION)");
@@ -240,8 +416,7 @@ public class LoginSceneController implements Initializable {
             
             
 //-------------------------------------------------------------------------------------            
-
-                      
+                 
         }catch (Exception e) {
             System.out.println(e);
 //           
@@ -263,7 +438,7 @@ public class LoginSceneController implements Initializable {
     @FXML
     private void closeEyeOnMouseClicked(MouseEvent event) {
 
-       passwordShowTextField.setText(passwordTextField.getText());
+      
        passwordTextField.setVisible(false);
         passwordShowTextField.setVisible(true);
         showEye.setVisible(true);
@@ -272,7 +447,7 @@ public class LoginSceneController implements Initializable {
 
     @FXML
     private void openEyeOnMouseClicked(MouseEvent event) {
-       passwordTextField.setText(passwordShowTextField.getText());
+
         passwordShowTextField.setVisible(false);
         passwordTextField.setVisible(true);
         hideEye.setVisible(true);

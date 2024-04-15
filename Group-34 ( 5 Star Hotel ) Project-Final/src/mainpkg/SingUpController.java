@@ -58,6 +58,13 @@ public class SingUpController implements Initializable {
 
     @FXML
     private void signUpButtonOnClick(MouseEvent event) throws IOException {
+        
+         if( passwordTextField.getText().isEmpty()|| userComboBox.getValue().isEmpty() ||
+           genderComboBox.getValue().isEmpty() || DatePickerTextField.getValue()==null){
+        JFrame frame = new JFrame();
+        JOptionPane.showMessageDialog(frame, "Some fields are empty");
+       return;  
+        }
         String email = emailTextField.getText().toString();
         try {
      

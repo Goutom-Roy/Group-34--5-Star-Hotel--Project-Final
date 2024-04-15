@@ -81,7 +81,17 @@ public class AccountantDashboardController implements Initializable {
     }
 
     @FXML
-    private void profitLossChartButtonOnClick(ActionEvent event) {
+    private void profitLossChartButtonOnClick(ActionEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("MonthlyProfitAndLossChartScene.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene ExpenseDetailsScene = new Scene(parent);
+        currentStage.setScene( ExpenseDetailsScene );
+        currentStage.show();
     }
 
     @FXML
@@ -119,7 +129,17 @@ public class AccountantDashboardController implements Initializable {
     }
 
     @FXML
-    private void feedBackButtonOnClick(ActionEvent event) {
+    private void feedBackButtonOnClick(ActionEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("AccountantFeedbackScene.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene ExpenseDetailsScene = new Scene(parent);
+        currentStage.setScene( ExpenseDetailsScene );
+        currentStage.show();
     }
 
 //    @FXML

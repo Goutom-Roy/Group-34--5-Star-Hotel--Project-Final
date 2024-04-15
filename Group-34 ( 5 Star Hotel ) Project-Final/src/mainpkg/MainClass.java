@@ -15,13 +15,6 @@ import javafx.stage.Stage;
  * @author gouto
  */
 
-package mainpkg;
-
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 /**
  *
@@ -31,8 +24,10 @@ public class MainClass extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-       Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+//       Parent root = FXMLLoader.load(getClass().getResource("/Accountant/AccountantDashboard.fxml"));
+     Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
        // Parent root = FXMLLoader.load(getClass().getResource("/ceo/HotelEmployee.fxml"));
+       
         
         Scene scene = new Scene(root);
         

@@ -4,6 +4,7 @@
  */
 package it_manager;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,7 +17,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
@@ -25,12 +30,34 @@ import javafx.stage.Stage;
  */
 public class IT_ManagerDashboardSceneController implements Initializable {
 
+    @FXML
+    private MediaView mediaView;
+    
+    private MediaPlayer mediaPlayer;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+                       // Load the video file
+        String videoPath = "IT_Manager.mp4";
+        Media media = new Media(new File(videoPath).toURI().toString());
+
+        // Create the MediaPlayer
+        mediaPlayer = new MediaPlayer(media);
+
+        // Set the MediaPlayer to the MediaView
+        mediaView.setMediaPlayer(mediaPlayer);
+
+        // Add event handler to replay the video when it ends
+        mediaPlayer.setOnEndOfMedia(() -> mediaPlayer.seek(Duration.ZERO));
+
+        // Play the video
+        mediaPlayer.play(); 
+        
+        
     }    
 
     @FXML
@@ -46,6 +73,10 @@ public class IT_ManagerDashboardSceneController implements Initializable {
 
     @FXML
     private void logoutOnActionButton(ActionEvent event) throws IOException {
+    
+
+        // Stop the MediaPlayer
+        mediaPlayer.stop();
         
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout Confirmation");
@@ -58,6 +89,9 @@ public class IT_ManagerDashboardSceneController implements Initializable {
         Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
         stg1.setScene(newScene);
         stg1.show();
+        }
+        else{
+            mediaPlayer.play();
         }
     }
 
@@ -91,6 +125,16 @@ public class IT_ManagerDashboardSceneController implements Initializable {
     @FXML
     private void budgetOnActionButton(ActionEvent event) throws IOException {
         Parent singup=FXMLLoader.load(getClass().getResource("IT_ManagerBudgetDashBoard.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+        
+    }
+
+    @FXML
+    private void feedbackOnActionButton(ActionEvent event) throws IOException {
+        Parent singup=FXMLLoader.load(getClass().getResource("IT_ManagerFeedback.fxml"));
         Scene newScene=new Scene(singup);
         Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
         stg1.setScene(newScene);
