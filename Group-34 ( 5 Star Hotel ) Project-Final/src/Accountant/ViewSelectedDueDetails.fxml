@@ -110,7 +110,7 @@
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Label>
-      <Label fx:id="PayMethodLabel" layoutX="315.0" layoutY="644.0" textFill="#fcf8f8">
+      <Label fx:id="PayMethodLabel" layoutX="315.0" layoutY="644.0" textFill="#252323">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>

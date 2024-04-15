@@ -1,5 +1,5 @@
 
-package Sales_Manager;
+package SalesManager;
 
 import java.io.FileWriter;
 import java.io.IOException;

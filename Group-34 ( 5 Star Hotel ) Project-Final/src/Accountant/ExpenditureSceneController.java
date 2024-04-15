@@ -165,7 +165,7 @@ public class ExpenditureSceneController implements Initializable {
              Expense u = new Expense(ExpenseDatePicker.getValue(),ExpenseCatagoryComboBox.getValue(),ExpenseDescriptionTextField.getText(),AmountTextField.getText(),PaymentMethodComboBox.getValue(), SupplierTextField.getText());
              ExpenseRecordTableView.getItems().addAll(u);
             
-            FileOutputStream fos = new FileOutputStream("ExpenseRecords.bin", true);
+            FileOutputStream fos = new FileOutputStream("Expense_Records.txt", true);
             DataOutputStream dos = new DataOutputStream(fos);
             
            LocalDate date=u.getDate();
@@ -179,7 +179,7 @@ public class ExpenditureSceneController implements Initializable {
             
             //read-----------------------------------
             
-            FileInputStream fis = new FileInputStream("ExpenseRecords.bin");
+            FileInputStream fis = new FileInputStream("Expense_Records.txt");
             DataInputStream dis = new DataInputStream(fis);
 
             ObservableList<Expense> ExpenseList = FXCollections.observableArrayList();
@@ -247,6 +247,11 @@ public class ExpenditureSceneController implements Initializable {
 
     @FXML
     private void RemoveExpenseButtonOnClick(ActionEvent event) {
+          Expense Selectedexpense=ExpenseRecordTableView.getSelectionModel().getSelectedItem();
+         if(Selectedexpense==null){
+             unselectRow.show();
+             return;
+         }
          ObservableList<Expense> SelectedExpense,allExpense;
         allExpense=ExpenseRecordTableView.getItems();
        SelectedExpense= ExpenseRecordTableView.getSelectionModel().getSelectedItems();
