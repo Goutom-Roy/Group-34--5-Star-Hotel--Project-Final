@@ -79,16 +79,18 @@ public class PayPendingDueController implements Initializable {
                 InvoiceDateTextField.setText("2024-03-19");
                 DueDateTextField.setText("2024-04-23");
                 AmountTextField.setText("310000BDT");
-                PaymentMethodTextField.setText("Bank Transfer");
                 StatusTextField.setText("Pending");
+                PaymentMethodTextField.setText("Bank Transfer");
+                
                 break;
             case "Maintenance Inc":
                InvoiceNumberTextField.setText("INV-2024-002");
                 InvoiceDateTextField.setText("2024-03-25");
                 DueDateTextField.setText("2024-04-27");
                 AmountTextField.setText("40000BDT");
-                PaymentMethodTextField.setText("Credit Card");
                 StatusTextField.setText("Pending");
+                PaymentMethodTextField.setText("Credit Card");
+               
                 break;
                 
             case "Linen Supplies Co":
@@ -96,32 +98,36 @@ public class PayPendingDueController implements Initializable {
                 InvoiceDateTextField.setText("2024-03-21");
                 DueDateTextField.setText("2024-04-17");
                 AmountTextField.setText("150000BDT");
-                 PaymentMethodTextField.setText("Bank Transfer");
                 StatusTextField.setText("Pending");
+                PaymentMethodTextField.setText("Bank Transfer");
+               
                 break;
             case "Fresh Foods Inc.":
                 InvoiceNumberTextField.setText("INV-2024-004");
                 InvoiceDateTextField.setText("2024-03-27");
                 DueDateTextField.setText("2024-04-30");
                 AmountTextField.setText("10000BDT");
-                 PaymentMethodTextField.setText("Bank Transfer");
                 StatusTextField.setText("Pending");
+                PaymentMethodTextField.setText("Bank Transfer");
+               
                 break;
             case "Golden Harvest Enterprises":
                InvoiceNumberTextField.setText("INV-2024-005");
                 InvoiceDateTextField.setText("2024-04-03");
                 DueDateTextField.setText("2024-05-03");
                 AmountTextField.setText("270000BDT");
-                 PaymentMethodTextField.setText("Bank Transfer");
                 StatusTextField.setText("Pending");
+                PaymentMethodTextField.setText("Bank Transfer");
+               
                 break;
             case "Nexus Supply Co.":
                 InvoiceNumberTextField.setText("INV-2024-006");
                 InvoiceDateTextField.setText("2024-04-09");
                 DueDateTextField.setText("2024-04-21");
                 AmountTextField.setText("530000BDT");
-                 PaymentMethodTextField.setText("Bank Transfer");
                 StatusTextField.setText("Pending");
+                PaymentMethodTextField.setText("Bank Transfer");
+               
                 break;
            
 
@@ -154,16 +160,17 @@ public class PayPendingDueController implements Initializable {
          try {
             FileWriter w = new FileWriter("DuePayments.bin",true);
             w.write( SupplierNameComboBox.getValue().toString() +";"+ InvoiceNumberTextField.getText().toString()+";"+ 
-              InvoiceDateTextField.getText().toString()+";"+DueDateTextField.getText().toString()+";"+AmountTextField.getText().toString()+";"+  PaymentMethodTextField.getText().toString()+";"+ StatusTextField.getText().toString()+"\n"); 
+              InvoiceDateTextField.getText().toString()+";"+DueDateTextField.getText().toString()+";"+AmountTextField.getText().toString()+";"+  StatusTextField.getText().toString()+";"+  PaymentMethodTextField.getText().toString()+"\n"); 
             w.close();
-            
+            SupplierNameComboBox.setValue(null);
            InvoiceNumberTextField.clear();
              InvoiceDateTextField.clear();
             //datePicker.setValue(null);
            DueDateTextField.clear();
            AmountTextField.clear();
+            StatusTextField.clear();
            PaymentMethodTextField.clear();
-           StatusTextField.clear();
+          
            
             
       JFrame frame = new JFrame();

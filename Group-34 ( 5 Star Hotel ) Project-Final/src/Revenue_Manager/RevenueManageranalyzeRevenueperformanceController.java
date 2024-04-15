@@ -1,5 +1,5 @@
 
-package Revenue_Manager;
+package RevenueManager;
 
 import java.io.IOException;
 import java.net.URL;
