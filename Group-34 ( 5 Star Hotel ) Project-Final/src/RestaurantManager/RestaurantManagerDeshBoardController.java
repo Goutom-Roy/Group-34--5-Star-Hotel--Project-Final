@@ -97,7 +97,18 @@ public class RestaurantManagerDeshBoardController implements Initializable {
     }
 
     @FXML
-    private void resignationButtonOnClick(ActionEvent event) {
+    private void resignationButtonOnClick(ActionEvent event) throws IOException {
+           FXMLLoader loader = new FXMLLoader(getClass().getResource("RestaurantManagerResignationScene.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene UserViewScene = new Scene(parent);
+
+        currentStage.setScene(UserViewScene);
+        currentStage.show(); 
     }
 
     @FXML

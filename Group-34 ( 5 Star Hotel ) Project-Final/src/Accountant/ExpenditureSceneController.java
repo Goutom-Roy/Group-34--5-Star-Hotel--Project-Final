@@ -26,8 +26,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellEditEvent;
@@ -76,6 +78,9 @@ public class ExpenditureSceneController implements Initializable {
 
     //Alert success=new Alert(Alert.AlertType.INFORMATION,"Successfully Added");
     Alert addedTable=new Alert(Alert.AlertType.INFORMATION,"Successfully Added To Table");
+    Alert unselectRow=new Alert(Alert.AlertType.WARNING,"Please Select the row from the table");
+    @FXML
+    private MenuBar MenuBar;
 
     /**
      * Initializes the controller class.
@@ -90,7 +95,7 @@ public class ExpenditureSceneController implements Initializable {
         SupplierTableColumn.setCellValueFactory(new PropertyValueFactory<Expense,String>("supplier"));
         
        ExpenseRecordTableView.setItems(this. getExpenses());
-        ExpenseCatagoryComboBox.getItems().addAll("Utilities","Maintenance","Stuff Costs","Supplies","Food and Bevarage","Marketing","Property expenses","Administrative Expenses","hospitality Services");
+        ExpenseCatagoryComboBox.getItems().addAll("Utilities","Maintenance","Staff Costs","Supplies","Food and Bevarage","Marketing","Property expenses","Administrative Expenses","hospitality Services");
        PaymentMethodComboBox.getItems().addAll("Cash","Credit Card","Bank Transfer");
             
             
@@ -220,6 +225,11 @@ public class ExpenditureSceneController implements Initializable {
 
     @FXML
     private void viewExpenseDetailsButtonOnClick(ActionEvent event) throws IOException {
+         Expense SelectedExpense=ExpenseRecordTableView.getSelectionModel().getSelectedItem();
+         if(SelectedExpense==null){
+             unselectRow.show();
+             return;
+         }
          FXMLLoader loader = new FXMLLoader(getClass().getResource("ExpenseDetailsScene.fxml"));
         Parent parent = loader.load();
 
@@ -261,7 +271,19 @@ public class ExpenditureSceneController implements Initializable {
     }
 
     @FXML
-    private void logOutButtonOnClick(ActionEvent event) {
+    private void logOutButtonOnClick(ActionEvent event) throws IOException {
+          Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout Confirmation");
+        alert.setHeaderText("Logout Successfully");
+        alert.setContentText("Do you want to Logout ? If not then click Cancel");
+        
+        if(alert.showAndWait().get()==ButtonType.OK){
+        Parent singup=FXMLLoader.load(getClass().getResource("/mainpkg/LoginScene.fxml"));
+        Scene newScene=new Scene(singup);
+        Stage stg1= (Stage)((Node)event.getSource()).getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
+    }
     }
 
     @FXML
@@ -290,6 +312,15 @@ public class ExpenditureSceneController implements Initializable {
 
     @FXML
     private void supplierTableColumnOnEdit(CellEditEvent event) {
+    }
+
+    @FXML
+    private void viewExpenseChartButtonOnClick(ActionEvent event) throws IOException {
+         Parent back=FXMLLoader.load(getClass().getResource("ExpensePieChart.fxml"));
+        Scene newScene=new Scene(back);
+        Stage stg1=(Stage)MenuBar.getScene().getWindow();
+        stg1.setScene(newScene);
+        stg1.show();
     }
     
 }
